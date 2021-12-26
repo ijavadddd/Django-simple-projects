@@ -1,0 +1,54 @@
+{% extends "base-index.html" %}
+{% load static %}
+{% block head %}
+  <link rel="stylesheet" href="{% static '/css/login.css' %}">
+  <title>طعم شیرین</title>
+{% endblock %}
+      {% block main %}
+      <div class="login-container">
+        <div class="switch-button">
+          <div id="activate-mode"></div>
+          <input type="button" value='ثبت نام' class="mode-button" onclick="register()">
+          <input type="button" value='ورود' class="mode-button" onclick="login()">
+        </div>
+          <div class="form-group">
+            <form id='login-form' action="">
+              <input type="text" name='user-name' class='form-input' placeholder='نام کاربری خود' required>
+              <input type="text" name='password' class='form-input' placeholder='رمز عبور' required>
+              <div class="checkbox-row">
+                <input type="checkbox" class='login-checkbox' required><span>رمز را به خاطر بسپار</span>
+              </div>
+              <input type="button" value="ورود" class='submit-button'>
+            </form>
+            
+            <form id='register-form' action="">
+              <input type="text" name='user-name' class='form-input' placeholder='نام کاربری ' required>
+              <input type="text" name='number' class='form-input' placeholder='تلفن همراه' required>
+              <input type="text" name='password' class='form-input' placeholder='رمز عبور' required>
+              <input type="text"  class='form-input' placeholder='تکرار رمز عبور' required>
+              <div class="checkbox-row">
+                <input type="checkbox" class='login-checkbox' required><span>با قوانین و مقررات را قبول دارم</span>
+                <input type="checkbox" name='email-me' class='login-checkbox' required><span>ارسال خبرنامه</span>
+              </div>
+              <input type="button" value="ثبت نام" class='submit-button'>
+            </form>
+          </div>
+        </div>
+      </body>
+      </html>
+      <script>
+        var x=document.getElementById('login-form')
+        var y=document.getElementById('register-form')
+        var z=document.getElementById('activate-mode')
+        function register(){
+          x.style.left ='-800px'
+          y.style.left ='0'
+          z.style.left ='50%'
+        }
+        function login(){
+          x.style.left ='0'
+          y.style.left ='-800px'
+          z.style.left ='0'
+        }
+      </script>
+    {% endblock %}

@@ -1,0 +1,126 @@
+.page-container{
+    width:100%;
+    padding:0;
+    margin:0;
+}
+.center-container{
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+}
+.article-box{
+    margin:20px;
+    width:22%;
+    height:410px;
+    background-color:#fff;
+    border-radius:5px;
+    box-shadow:0px 8px 11px #c6c6c6;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.article-content{
+    display:flex;
+    /* justify-content:center; */
+    flex-wrap:wrap;
+}
+.article-box-image{
+    margin:0 auto;
+    max-width:100%;
+    max-height:190px;
+    border-radius:5px 5px 0 0;
+}
+.article-content__caption{
+    margin:10px 0 0 0;
+    width:100%;
+    height:100px;
+    padding:0;
+    overflow:hidden;
+}
+.article-box__caption__title{
+    font-family:'iran-sans';
+    font-size:16px;
+    font-weight:600;
+    color:#171A21;
+    line-height:26px;
+    text-align:center;
+    padding:10px 8px;
+}
+.article-content__caption__author{
+    font-family:'iran-sans';
+    font-size:14px;
+    font-weight:400;
+    color:#333333;
+    line-height:20px;
+    text-align:center;
+    padding:10px 8px;
+}
+.article-content__divider{
+    margin: 0 auto;
+    width: 80%;
+    height: 0.1px;
+    background-color: #eee;
+    border: none;
+}
+.article-content__detail{
+    margin:10px 0 0 0;
+    width:100%;
+    height:100px;
+    padding:0;
+    overflow:hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+.article-content__detail__date , .article-content__detail__time{
+    width: 50%;
+    padding: 15px 2px;
+    font-family: 'iran-sans';
+    font-size: 12px;
+    font-weight: 400;
+    color: #333333; 
+    box-sizing: border-box;
+    text-align:center;
+}
+.article-detail-icon{
+    font-size:16px;
+    padding:0 0 0 7px;
+}
+.article-content__detail__button{
+    width:70%;
+    height:40px;
+    margin:0 auto;
+    border-radius:5px 5px 0 0;
+    background-color:#F7B32B;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+    bottom: -6px;
+    color: #333333; 
+    font-size: 18px;
+    font-weight:800;
+}
+@media screen and (max-width:600px){
+    .article-box{
+        width:100%;
+    }
+    
+}
+@media screen and (min-width:600px){
+    .article-box{
+        width:42%;
+    }
+    
+}
+@media screen and (min-width:800px){
+    .article-box{
+        width:30%;
+    }
+    
+}
+@media screen and (min-width:1024px){
+    .article-box{
+        width:22%;
+    }
+    
+}

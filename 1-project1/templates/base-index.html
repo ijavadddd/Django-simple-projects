@@ -1,0 +1,90 @@
+{% load static %}
+<!doctype html>
+<html lang="fa" dir="rtl">
+    <head>
+        {% include "partials/head.html" %}
+        {% block head %}
+            <title>طعم شیرین برنامه نویسی</title>
+        {% endblock %}
+    </head>
+    <body>
+        <header class='header'>
+            <!-- INSTAGRAM ICON -->
+            <a class='instagram-icon' href="#"><i class="bi bi-instagram"></i>اینستاگرام من</a>
+            <!-- Login button -->
+            <dev class="login-box">
+                <ul class='login-list'>
+                    <li class='login-item'>
+                        <a href="{% url 'login' %}">
+                            <input type="button" value="ورود">
+                        </a>
+                    </li>
+                    <li class='divider-item'>|</li>
+                    <li class='register-item'>
+                        <a href="#">
+                            <input type="button" value="ثبت نام">
+                        </a>
+                    </li>
+                </ul>
+            </dev>
+            <!-- Search -->
+            <input class='search-input' type="text" placeholder="دنبال چی میگردی..">
+            <input class='search-button' type="button" value="جستجو">
+            <!-- Menu -->
+            <nav>
+                <div class='desktop-menu'>
+                    <ul class="menu-list">
+                        <li class='menu-item menu-active-item'>
+                            <a href="{% url 'home' %}">صفحه اصلی</a>
+                        </li>
+                        <li class='menu-item'>
+                            <a href="{%  url 'blog' %}">مقالات</a>
+                        </li>
+                        <li class='menu-item'>
+                            <a href="#">تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- TOGGLE NAVBAR FOR MOBILE -->
+            <nav class="toggle-menu">
+                <ul class='toggle-list'>
+                    <li class="toggle-button">
+                        <i class="bi bi-list toggle-style"></i>
+                        <ul class='toggle-dropdown'>    
+                            <li class='toggle-item'>
+                                <a href="{% url 'home' %}">صفحه اصلی</a>
+                            </li>
+                            <li class='toggle-item'>
+                                <a href="{% url 'blog' %}">مقالات</a>
+                            </li>
+                            <li class='toggle-item'>
+                                <a href="#">تماس با ما</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- SHOP AND USER PANEL BUTTON -->
+            <div class="basket">
+                <ul>
+                    <li class="basket--item">
+                        <a href="#">
+                            <i class="bi bi-basket"></i>
+                            <span class="shop-card-counter">0</span>
+                        </a>
+                    </li>
+                    <li class='divider-item'>|</li>
+                    <li class="basket--item">
+                        <a href="#">پنل کاربری</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        {% block main %}
+
+        {% endblock %}
+
+    </body>
+</html>
