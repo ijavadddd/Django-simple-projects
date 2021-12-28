@@ -34,7 +34,8 @@
             <nav>
                 <div class='desktop-menu'>
                     <ul class="menu-list">
-                        <li class='menu-item menu-active-item'>
+                        <li class='menu-item '>     
+                            <!-- menu-active-item -->
                             <a href="{% url 'home' %}">صفحه اصلی</a>
                         </li>
                         <li class='menu-item'>
@@ -83,8 +84,44 @@
         </header>
 
         {% block main %}
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         {% endblock %}
-
+        <footer class='footer'>
+            <section class="footer-column">
+                <div class="footer-menu">
+                    <ul>
+                        <li class='footer-menu-item'>
+                            <a href="{% url 'home' %}">صفحه اصلی</a>
+                        </li>
+                        <li class='footer-menu-item'>
+                            <a href="{%  url 'blog' %}">مقالات</a>
+                        </li>
+                        <li class='footer-menu-item'>
+                            <a href="#">تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="footer-column">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </section>
+            <section class="footer-column">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </section>
+            <section class="footer-bottom">
+                <p>ساخته شده توسط ijavadddd</p>
+            </section>
+        </footer>
     </body>
 </html>
