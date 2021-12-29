@@ -312,6 +312,7 @@ body{
     background-color:#fafafa;
     display: flex;
     flex-wrap: wrap;
+    margin-top:35px;
 }
 .footer-column{
     padding:15px;

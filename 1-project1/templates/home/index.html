@@ -7,9 +7,13 @@
 {% endblock %}
 
 {% block main %}
-        <div class="page-container">
-            <div class="center-container">
-                <div class="teacher-introduce">
+<div class="page-container">
+    <div class="center-container">
+        <div>
+            <p class="teachers-title">مدرسین</p>
+            <hr class="title-undeline">
+        </div>
+            <div class="teacher-introduce">
                         {% for person in teacher %}
                             {% if person.age <= 20 %}
                                 <div class="teacher-box teacher-box--red">

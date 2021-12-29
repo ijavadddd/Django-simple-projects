@@ -10,6 +10,20 @@
     align-items:center;
     justify-content:center;
 }
+.teachers-title{
+    font-size: 40px;
+    font-family: 'iran-sans';
+    font-weight: 600;
+    margin: 50px 50px 0 0;
+}
+.title-undeline{
+    margin: 15px 42px 0 0;
+    width: 205px;
+    border: none;
+    border-radius: 85px;
+    height: 4px;
+    background-color: #212121;
+}
 .teacher-box{
     width:25%;
     height:510px;
@@ -99,7 +113,7 @@
 }
 .box-button:hover{
     transition:0.8s;
-    transition-delay: 0.7s;
+    transition-delay: 0.3s;
     background-color:#3f7fea;
     width:100%;
     border-radius:0;
