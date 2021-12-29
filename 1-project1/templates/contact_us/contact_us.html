@@ -1,0 +1,25 @@
+{% extends "base-index.html" %}
+{% load static %}
+
+{% block head %}
+        <link rel="stylesheet" href="{% static '/css/contact_us.css' %}">
+        <title>طعم شیرین برنامه نویسی</title>
+{% endblock %}
+
+{% block main %}
+<div class="page-container">
+    <div class="center-container">
+        <div class="contact-form">
+            <form action="#">
+                <input class="contact-form-input" type="text" name="firstName"  placeholder="نام" required>
+                <input class="contact-form-input" type="text" name="lastName"   placeholder="نام خانوادگی" >
+                <input class="contact-form-input" type="text" name="MobileNumber"   placeholder="شماره تلفن" required>
+                <input class="contact-form-input" type="email" name="email" placeholder="info@ijavadddd.com">
+                <input class="contact-form-input" type="text" name="subject" placeholder="موضوع" >
+                <textarea class="message-box" name="message" id="" rows="15"></textarea>
+                <input class="form-submit-button" type="button" value="ارسال">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

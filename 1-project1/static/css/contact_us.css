@@ -1,0 +1,83 @@
+.center-container{
+    /* background-color: red; */
+    margin:20px auto;
+}
+.contact-form{
+    width:60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+}
+.contact-form-input{
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    margin:15px;
+    padding:12px 30px;
+    box-sizing:border-box;
+    font-family: 'iran-sans';
+    font-size:15px;
+    background-color:#f4f4f4;
+}
+.contact-form-input:focus{
+    transition:0.8s;
+    background-color:#fff;
+    box-shadow: 0px 3px 3px #999999;
+}
+.contact-form > form input:nth-child(-1n+2){
+    width:45%;
+    /* background-color:yellow; */
+}
+.contact-form > form input:nth-child(4){
+    direction:ltr;
+    width:60%;
+}
+.contact-form > form input:nth-child(5){
+    width: 90%;
+}
+.message-box{
+    width:90%;
+    max-width:90%;
+    min-height:30%;
+    resize:none;
+    border:none;
+    border-radius:5px;
+    outline:none;
+    padding:30px;
+    font-size:16px;
+    font-weight:600;
+    font:'yekan';
+    background-color:rgb(242 242 242);
+}
+.message-box:focus{
+    background-color:#fff;
+    box-shadow: 0px 3px 3px #999999;
+}
+.form-submit-button{
+    outline:none;
+    border:none;
+    border-radius: 50px;
+    background-color: #009e10;
+    color: #fff;
+    width:110px;
+    margin:20px 15px;
+    padding:15px 22px;
+    box-sizing: border-box;
+    font-size:17px;
+    font-family: 'iran-sans';
+    font-weight:800;
+    float:left;
+}
+@media screen and (max-width:1100px){
+    .contact-form{
+        width:100%;
+    }
+    .contact-form form{
+        width:100%;
+    }
+    .contact-form-input{
+        width: 100% !important;;
+    }
+}
+

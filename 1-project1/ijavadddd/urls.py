@@ -7,4 +7,5 @@ urlpatterns = [
     path('',include('apps.home.urls')),
     path('blog',include('apps.blog.urls')),
     path('login',include('apps.login.urls')),
+    path('contact_us',include('apps.contact_us.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
