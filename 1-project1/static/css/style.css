@@ -71,9 +71,12 @@ body{
     transition-property: background-color;
     transition-duration: 0.4s;
     transition-timing-function: ease;
+    display: flex;
+    justify-content: center;
 }
 .menu-item > a{
-    width: 200px;
+    width: 100%;
+    padding:1.3em;
     align-self: center;
     text-align: center;
     color:#171A21;
