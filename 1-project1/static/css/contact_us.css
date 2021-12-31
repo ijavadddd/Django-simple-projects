@@ -1,3 +1,6 @@
+html{
+    font-size:10px;
+}
 .center-container{
     /* background-color: red; */
     margin:20px auto;
@@ -9,11 +12,20 @@
     justify-content: center;
     margin:0 auto;
 }
+.contact-form form{
+    display: flex;
+    align-content: space-around;
+    justify-content: start;
+    gap:20px;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width: 100%;
+}
 .contact-form-input{
     outline: none;
     border:none;
     border-radius: 3px;
-    margin:15px;
+    /* margin:15px; */
     padding:12px 30px;
     box-sizing:border-box;
     font-family: 'iran-sans';
@@ -26,20 +38,24 @@
     box-shadow: 0px 3px 3px #999999;
 }
 .contact-form > form input:nth-child(-1n+2){
-    width:45%;
-    /* background-color:yellow; */
+    flex: 1 1 14rem;
+    width: max(15rem,50%);
 }
-.contact-form > form input:nth-child(4){
+.contact-form > form input:nth-child(n+3){
     direction:ltr;
-    width:60%;
+}
+.contact-form > form input:nth-child(n+3):nth-child(-n+4){
+    flex: 1 1 15rem;
+    width: max(40%,22rem);
 }
 .contact-form > form input:nth-child(5){
-    width: 90%;
+    direction:rtl;
+    width: max(40ch,20%);
 }
 .message-box{
     width:90%;
     max-width:90%;
-    min-height:30%;
+    min-height: 33vh;
     resize:none;
     border:none;
     border-radius:5px;
@@ -60,24 +76,8 @@
     border-radius: 50px;
     background-color: #009e10;
     color: #fff;
-    width:110px;
-    margin:20px 15px;
-    padding:15px 22px;
-    box-sizing: border-box;
-    font-size:17px;
+    padding: 1em 1.8em;
+    font-size:1.7rem;
     font-family: 'iran-sans';
     font-weight:800;
-    float:left;
 }
-@media screen and (max-width:1100px){
-    .contact-form{
-        width:100%;
-    }
-    .contact-form form{
-        width:100%;
-    }
-    .contact-form-input{
-        width: 100% !important;;
-    }
-}
-
