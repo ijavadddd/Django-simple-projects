@@ -1,3 +1,75 @@
+.home-introduction{
+    width:100%;
+    min-height:90vh;
+    /* margin-top:20px; */
+    background-image:url(../../media/images/home-slide-background.jpg);
+    background-color: rgb(24 24 24 / 69%);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-size: cover;    
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+}
+@media screen and (max-width:650px) {
+        .home-introduction{
+            justify-content: center;
+        }
+        .cover-image{
+            width: 100%;
+        }
+        .slider-description--paragraph{
+            width:80%;
+        }
+    }
+.cover-image{
+    max-width: max(6rem,30%);
+    margin:2rem;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.cover-image img{
+    border-radius: 50%;
+    width: max(7rem,80%);;
+}
+.slider-description{
+    flex: 1 1 60ch;
+    padding: 1.3em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: self-end;
+    margin: 0 auto;
+}
+.slider-description--paragraph{
+    max-width: max(80ch,60%);
+    background-color:rgb(46 46 46 / 78%);
+    color:#fff;
+    padding: 1.1em;
+    border-radius: 5px;
+    line-height: 2.2em;
+    margin: 2.2em auto;
+}
+.go-to-bio-button{
+    color: #fff;
+    background-color: blue;
+    font-size: 1.1rem;
+    padding: 1em 3em;
+    margin-inline: 3em;
+}
+
+
+
+
+
+
+
+
+
 .teacher-introduce{
     margin:50px auto;
     padding:20px;
