@@ -343,7 +343,7 @@ body{
     }
 }
 .skill-container-title{
-    padding:1rem 5rem;
+    padding:0rem 5rem;
     box-sizing: border-box;
     font-size:2em;
     font-weight: 800;
@@ -361,8 +361,9 @@ body{
     gap:2rem;
 }
 .progress{
-    width: max(45%,25rem);
-    margin: 0 auto;
+    /* width: max(45%,25rem); */
+    flex: 1 2 max(45%,25rem);
+    /* margin: 0 auto; */
 }
 .skill{
     display:flex;
