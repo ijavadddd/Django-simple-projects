@@ -20,6 +20,9 @@
 a{
     text-decoration: none;
 }
+html{
+    font-size: 10px;
+}
 body{
     background-color: #FBFCFF;
     font-family:'yekan';
