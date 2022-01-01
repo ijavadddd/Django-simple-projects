@@ -116,11 +116,11 @@ body{
     max-width: 75%;
     height: auto;
     background-color: #fff;
-    border-radius: 100%;
     overflow: hidden;
     margin: 10px auto; 
 }
 .person-icon img{
+    border-radius: 100%;
     width:100%;
 }
 .box-description{
