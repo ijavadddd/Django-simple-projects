@@ -36,10 +36,97 @@
     background-color: #353535ad;
     padding: 1.3rem;
 }
-.wok-steps{
+.car-rescuer--center-container{
+    background-color:rgb(248, 248, 248);
     width:100%;
-    min-height:200px;
-    background-color:yellow;
+    padding:20px;
+    box-sizing: border-box;
 }
+.need-car-rescuer{
+    width:90%;
+    margin:0 auto;
+    min-height:200px;
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    /* align-items:center; */
+}
+.cover-car-rescuer{
+    /* width:180px;   */
+    overflow:hidden;
+    padding:2rem;
+    box-sizing: border-box;
+    flex:0 0 max(30%,200px) ;
+    margin:0 auto;
+    border-radius:100%;
+    min-height:415px;
+    background-image: url(../../media/images/car_rescuer.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.cover-car-rescuer img{
+    max-width:100%;
+    height:auto;
+    border-radius:100%;
+}
+.car-rescuer--title{
+    font-size:5.5rem;
+    font-family: 'Archivo-Narrow';
+}
+.car-rescuer{
+    width:max(50ch,70%);
+    padding:50px;
+    box-sizing: border-box;
+    /* height:50px; */
+    flex:1 1 30%;
 
-
+}
+.car-rescuer--description{
+    color:rgb(82, 82, 82);
+    font-family: 'Merriweather';
+    font-size:1.6rem;
+    line-height:2.5rem;
+}
+.access-service{
+    /* margin:3rem 0 0 5rem; */
+    min-height: 50px;
+}
+.access-service--list{
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: center;
+    gap:40px;
+    margin: 25px;
+}
+.access-service--list-item{
+    font-family: 'Archivo-Narrow';
+    flex:0 1 20ch;
+}
+.access-service--list-item a{
+    font-family: 'Archivo-Narrow';
+    font-size: 2rem;
+    padding: 15px 55px;
+    box-sizing: border-box;
+    color:#fff;
+    background-color:rgb(19, 86, 230);
+    transition:0.5s 0.1s;
+}
+.access-service--list-item a:hover{
+    background-color:rgb(23, 165, 71);
+}
+.access-service--offline__title{
+    font-size:3rem;
+    color:rgb(185, 0, 87);
+    font-weight: 900;
+    font-family:'Archivo-Narrow';
+}
+.numbers-box{
+    margin: 10px 0 0  20px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    font-family: 'Merriweather';
+    font-weight: 800;
+}

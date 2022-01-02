@@ -139,11 +139,12 @@ a{
     display: flex;
     justify-content: space-around;
     align-items:center;
-    gap:30px;
+    gap:60px;
 }
 .footer-bottom--menu-list-item{
     font-size:2rem;
     font-family:'Josefin-Sans';
+    /* margin:25px; */
 }
 .footer-bottom--menu-list-item a{
     color:  rgb(110, 110, 110);
