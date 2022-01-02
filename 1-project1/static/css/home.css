@@ -189,19 +189,7 @@ body{
     width:100%;
     border-radius:0;
 }
-
-
-.horizintal-scroll{
-    width:100%;
-    min-height:390px;
-    background-color:yellow;
-    display:flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-    align-items:center;
-    padding:5px;
-    box-sizing:border-box;
+.scroll-container{
     background-image:url(../../media/images/article-slide-background.jpg);
     background-color: rgb(24 24 24 / 69%);
     background-attachment: fixed;
@@ -209,10 +197,28 @@ body{
     background-clip: border-box;
     background-repeat: no-repeat;
     background-size: cover;
+
+}
+.horizontal-scroll{
+    /* width:120%; */
+    min-height:390px;
+    /* background-color:yellow; */
+    display:flex;
+    overflow-x:scroll;
+    /* flex-wrap: wrap;  */
+    gap: 20px;
+    /* justify-content: space-around; */
+    align-items:center;
+    padding:5px;
+    box-sizing:border-box;
     padding: 4em 1.2em;
 }
+.horizontal-scroll::-webkit-scrollbar{
+    height: 0;
+    height: 0;
+}
 .article-box{
-    width: min(50ch,80%);
+    min-width: min(50ch,80%);
     height:450px;;
     background-color:#fff;
     border-radius: 8px;
