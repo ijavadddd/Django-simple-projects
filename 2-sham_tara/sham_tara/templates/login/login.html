@@ -1,0 +1,30 @@
+{% extends "base-index.html" %}
+{% load static %}
+
+{% block head-title %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Login</title>
+{% endblock %}
+
+{% block main %}
+    <div class="login-form-container">
+        <div class="form-container">
+            <div class="form--title">
+                <p>
+                    Login
+                </p>
+            </div>
+            <form action="#" class="login-form">
+                <input type="text" class="form--input" placeholder="Mobile number" name="mobile-number" required>
+                <input type="password" class="form--input" placeholder="Password" name="password" id="password" required>
+                <div class=form--checkbox-container>
+                    <input type="checkbox" class="form--checkbox" required><span>Remmber Me</span>
+                </div>
+                <input type="submit" class="form--button" value="Submit">
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+
+

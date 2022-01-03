@@ -1,0 +1,34 @@
+{% extends "base-index.html" %}
+{% load static %}
+
+{% block head-title %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <title>register</title>
+{% endblock %}
+
+{% block main %}
+    <div class="register-form-container">
+        <div class="form-container">
+            <div class="form--title">
+                <p>
+                    Register
+                </p>
+            </div>
+            <form action="#" class="register-form">
+                <input type="text" class="form--input" placeholder="Mobile number" name="mobile-number" required>
+                <input type="text" class="form--input" placeholder="First name" name="first-name" required>
+                <input type="text" class="form--input" placeholder="Last name" name="last-name" required>
+                <input type="password" class="form--input" placeholder="Password" name="password" id="password" required>
+                <input type="password" class="form--input" placeholder="re-enter Password"   id="repead-password" required>
+                <div class=form--checkbox-container>
+                    <div><input type="checkbox" class="form--checkbox" required><span>Agree Term of service</span></div>
+                    <div><input type="checkbox" class="form--checkbox"><span>Would you like to receive product updates and announcements via email?</span></div>
+                </div>
+                <input type="submit" class="form--button" value="Register">
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+
+

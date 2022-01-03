@@ -19,7 +19,7 @@
                         </a>
                     </li>
                     <li class="header-menu--list__item">
-                        <a href="#">Home</a>
+                        <a href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="header-menu--list__item">
                         <a href="#">How</a>
@@ -35,10 +35,10 @@
             <div class="header-panel">
                 <ul class="header-panel--list">
                     <li class="header-panel--list-item">
-                        <a href="#" blank="_blank">Login</a>
+                        <a href="{% url 'login' %}" blank="_blank">Login</a>
                     </li>
                     <li class="header-panel--list-item">
-                        <a href="#" blank="_blank">Register</a>
+                        <a href="{% url 'register' %}" blank="_blank">Register</a>
                     </li>
                 </ul>
             </div>
