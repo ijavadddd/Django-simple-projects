@@ -13,3 +13,9 @@ def register(request):
         'media':settings.MEDIA_URL,
     }
     return render(request,'login/register.html',context)
+
+def confirm_number(request):
+    context={
+        'media':settings.MEDIA_URL,
+    }
+    return render(request,'login/register_confirm_number.html',context)
