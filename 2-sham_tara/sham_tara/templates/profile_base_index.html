@@ -1,0 +1,43 @@
+{% extends "base-index.html" %}
+{% load static %}
+
+{% block head-title %}
+    <link rel="stylesheet" href="{% static 'css/user_profile.css' %}">
+    {% block second-head-title %}
+    <title>Panel</title>
+    {% endblock %}
+{% endblock %}
+
+{% block main %}
+    <div class="panel-container">
+        <div class="sidebar-menu-container">
+            <div class="menu-container">
+                <ul class="vertical-menu">
+                    <li class="vertical-menu--item">
+                        <a href="{% url 'user_profile' %}">Profile</a>
+                    </li>
+                    <li class="vertical-menu--item">
+                        <a href="#">Credit
+                            <div class="credit-label">
+                                <span>
+                                    10000000$
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="vertical-menu--item">
+                        <a href="{% url 'car_rescuer' %}">Request car assistance</a>
+                    </li>
+                    <li class="vertical-menu--item">
+                        <a href="#">Discount code</a>
+                    </li>
+                    <li class="vertical-menu--item">
+                        <a href="#">Submitting a complaint</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% block menu_content_container %}{% endblock %}
+    </div>
+{% endblock %}
+

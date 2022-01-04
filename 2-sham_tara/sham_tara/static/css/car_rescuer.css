@@ -1,0 +1,105 @@
+.send-request-container{
+    width:95%;
+    min-height:500px;
+    background-color:rgb(255, 255, 255);
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+.request-detail-container{
+    width:60%;
+    min-height:500px;
+    /* background-color:red; */
+    padding:12px 20px;
+    box-sizing: border-box;
+}
+.request-Title h4{
+    font-size: 3rem;
+    font-weight: 900;
+    color:#000;
+}
+.request-Title--divider{
+    margin-top:10px;
+    border:none;
+    height:0.9px;
+    width:24ch;
+    background-color:rgb(192, 192, 192);
+}
+.detail-form-container{
+    margin-top:20px;
+}
+.detail-form{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: flex-start;
+    margin:0 auto; */
+}
+.detail-form >div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.detail-form p{
+    font-size:1.5rem;
+    color:rgb(35 168 102);
+    padding-inline:20px;
+}
+.form--input{
+    border:none;
+    border-radius:5px;
+    outline:none;
+    padding:15px 20px;
+    box-sizing: border-box;
+    font-family:'Josefin-Sans';
+    font-size:1.7rem;
+    flex:0 1 80%;
+    background-color: #f6f6f6;
+    /* margin:0 auto; */
+}
+.describe-problem-conatiner{
+    /* flex:1 1 100%; */
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin:20px auto;
+}
+#vehicle-problem{
+    /* transition:0.5s; */
+    font-family:'Josefin-Sans';
+    font-size: 1.7rem;
+    outline:none;
+    margin:15px 10px;
+    width:inherit;
+}
+#describe-problem{
+    max-width:100%;
+    width:60%;
+    min-width: 40%;
+    min-height:100px;
+    outline:none;
+    font-family:'Josefin-Sans';
+    font-size: 2.3rem;
+    padding:15px 10px;
+    box-sizing: border-box;
+    
+}
+.form--button{
+    outline:none;
+    border:none;
+    border-radius:5px;
+    padding: 1.2rem 40%;
+    font-family: 'Archivo-Narrow';
+    background-color: #0095ff;
+    color: #fff;
+    font-size:2.2rem;
+    font-weight: 800;
+    cursor:pointer;
+    /* margin:0 auto; */
+
+}
+
+
+

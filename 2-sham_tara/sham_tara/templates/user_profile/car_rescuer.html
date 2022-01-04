@@ -1,0 +1,88 @@
+{% extends "profile_base_index.html" %}
+{% load static %}
+
+{% block second-head-title %}
+    <link href="https://static.neshan.org/sdk/openlayers/5.3.0/ol.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/car_rescuer.css' %}">
+    <title>Send request</title>
+{% endblock %}
+
+{% block menu_content_container %}
+    <div class="menu-content-container">
+        <div class="warning-message">
+            <p>
+                To access the Car Rescue Request section, please complete your profile,<a href="#">click here for complete your profile.</a>.
+            </p>
+        </div>
+        
+        <div class="send-request-container">
+            <div id="map" style="width: 400px; min-height: 450px; background: #eee; border: 2px solid #aaa;"></div>
+            <div class="request-detail-container">
+                <div class="request-Title">
+                    <h4>
+                        Request Car Rescuer
+                    </h4>
+                    <hr class="request-Title--divider">
+                </div>
+                <div class="detail-form-container">
+                    <form action="#" class="detail-form">
+                        <div>
+                            <p>
+                                Instead fill the box you can mark your location in map.
+                            </p>
+                            <input type="text" class="form--input" placeholder="Location " name="Location" id="Location" required>
+                            <div class="describe-problem-conatiner">
+                                <select name="vehicle-problem" id="vehicle-problem">
+                                    <optgroup label="Engine">
+                                        <option value="" style="display: none">What happend??</option>
+                                        <option value="combustion">Incomplete combustion of the engine</option>
+                                        <option value="battery">Battery problem</option>
+                                        <option value="car-welding">Car welding</option>
+                                    </optgroup>
+                                    <optgroup label="Rubber">
+                                        <option value="rubber-puncture">Rubber puncture</option>
+                                        <option value="whistling-car-pads">Whistling car pads</option>
+                                    </optgroup>
+                                    <optgroup label="Other problems">
+                                        <option value="rubber-puncture">Other problem</option>
+                                    </optgroup>
+                                </select>
+                                <textarea name="describe-problem" id="describe-problem" max-cols="60" rows="10" placeholder="You can describe problem completly , if you want"></textarea>
+                            </div>
+                        </div>
+                        <input type="submit" class="form--button" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+    
+{% endblock %}
+
+
+
+
+{% block script %}
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://static.neshan.org/sdk/openlayers/5.3.0/ol.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // myMap.setMapType("neshan")
+        var myMap = new ol.Map({
+            target: 'map',
+            key: 'web.Z95INlGYafYIYE2TB6fM6V3VaSl1OIuAVKpVbHDD',
+            maptype: 'dreamy',
+            poi: true,
+            traffic: false,
+            view: new ol.View({
+                center: ol.proj.fromLonLat([51.338076, 35.699756]),
+                zoom: 14
+                
+            })
+        });
+        </script>
+
+{% endblock %}
