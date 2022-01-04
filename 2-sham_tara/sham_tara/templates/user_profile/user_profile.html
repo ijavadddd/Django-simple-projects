@@ -1,0 +1,96 @@
+{% extends "base-index.html" %}
+{% load static %}
+
+{% block head-title %}
+    <link rel="stylesheet" href="{% static 'css/user_profile.css' %}">
+    <title>user panel</title>
+{% endblock %}
+
+{% block main %}
+    <div class="panel-container">
+        <div class="sidebar-menu-container">
+            <div class="menu-container">
+                <ul class="vertical-menu">
+                    <li class="vertical-menu--item">
+                        <a href="#">Profile</a>
+                    </li>
+                    <li class="vertical-menu--item">
+                        <a href="#">Credit
+                            <div class="credit-label">
+                                <span>
+                                    10000000
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="vertical-menu--item">
+                        <a href="#">Request car assistance</a>
+                    </li>
+                    <li class="vertical-menu--item">
+                        <a href="#">Discount code</a>
+                    </li>
+                    <li class="vertical-menu--item">
+                        <a href="#">Submitting a complaint</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu-content-container">
+            <div class="warning-message">
+                <p>
+                    To access the Car Rescue Request section, please complete your profile,<a href="#">click here for complete your profile.</a>.
+                </p>
+            </div>
+            <div class="profile-container">
+                <div class="profile--image">
+                    <img src="{{media}}images/unknown_user_profile.png" alt="">
+                    <div class="add-profile-photo">
+                        <a href="#">
+                            <img src="https://img.icons8.com/doodle/48/000000/add.png"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="profile--information">
+                    <div class="personal-info">
+                        <div class="profile-info-lable profile--information__first-name">
+                            <p>
+                                First name : <span>Javad</span>
+                            </p>
+                        </div>
+                        <div class="profile-info-lable profile--information__last-name">
+                            <p>
+                                Last name : <span>Ghasemi</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="vehicle-info">
+                        <div class="profile-info-lable profile--information__vehicle">
+                            <p>
+                                vehicle Brand : <span>----</span>
+                            </p>
+                        </div>
+                        <div class="profile-info-lable profile--information__vehicle-model">
+                            <p>
+                                vehicle Model : <span>----</span>
+                            </p>
+                        </div>
+                        <div class="profile-info-lable profile--information__vehicle-plaque">
+                            <p>
+                                vehicle plaque: <span>----</span>
+                            </p>
+                        </div>
+                        <div class="profile-info-lable profile--information__vehicle-color">
+                            <p>
+                                vehicle color : <span>----</span>
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#" class="profile-button" title="Edit profile">Complete profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+

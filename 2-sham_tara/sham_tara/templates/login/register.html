@@ -14,10 +14,10 @@
                     Register
                 </p>
             </div>
-            <form action="#" class="register-form">
-                <input type="text" class="form--input" placeholder="Mobile number" name="mobile-number" required>
+            <form action="{% url 'confirm_number' %}" class="register-form">
                 <input type="text" class="form--input" placeholder="First name" name="first-name" required>
                 <input type="text" class="form--input" placeholder="Last name" name="last-name" required>
+                <input type="text" class="form--input" placeholder="Mobile number" name="mobile-number" required>
                 <input type="password" class="form--input" placeholder="Password" name="password" id="password" required>
                 <input type="password" class="form--input" placeholder="re-enter Password"   id="repead-password" required>
                 <div class=form--checkbox-container>

@@ -1,0 +1,149 @@
+.panel-container{
+    width:100%;
+    min-height:800px;
+    background-color:rgb(241, 241, 241);
+    display:flex;
+}
+.sidebar-menu-container{
+    width:max(20%,30ch);
+    min-height:800px;
+    background-color:#ececec;
+}
+.vertical-menu{
+    display:flex;
+    justify-content:center;
+    align-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap:2px;
+    background-color:#000;
+}
+.vertical-menu--item{
+    position: relative;
+    flex:1 1 100%;
+    box-sizing: border-box;
+    /* margin: 20px auto; */
+    width: 100%;
+    height: 63px;
+}
+.vertical-menu--item > a{
+    position: absolute;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    padding:1rem 2rem;
+    box-sizing: border-box;
+    font-family:'Archivo-Narrow';
+    font-size: 2rem;
+    width:100%;
+    min-height: 100%;
+    background-color: rgb(33, 71, 30);
+    text-align: left;
+}
+.vertical-menu--item > a:hover{
+    transition:0.5s;
+    background-color: rgb(15 96 144);
+}
+.vertical-menu li:nth-child(2) a{
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.credit-label{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    /* width: 25px;
+    height: 25px; */
+    /* text-align: center; */
+    background-color:red;
+    /* border-radius: 100%; */
+    font-family:'Josefin-Sans';
+    font-size: 1.8rem;
+    padding:1.1rem 2rem;
+    box-sizing: border-box;
+}
+.menu-content-container{
+    width:80%;
+}
+.warning-message{
+    margin:10px auto;
+    width:fit-content;
+    background-color:#ffcc00;
+    padding:12px 20px;
+    border-radius:10px;
+    font-family:'Merriweather';
+    font-weight: 600;
+}
+.warning-message a{
+    color:#1b5896;
+}
+.profile-container{
+    width:90%;
+    margin:20px auto;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:30px;
+}
+.profile--image{
+    position: relative;
+    overflow:hidden;
+    width:220px;
+}
+.add-profile-photo{
+    position: absolute;
+    width: 50px;
+    right: 12px;
+    bottom: 5px;
+    border-radius: 50%;
+}
+.add-profile-photo img{
+    box-shadow: 0 5px 4px #bababa;
+}
+.profile--image img{
+    width:100%;
+    border-radius: 50%;
+}
+.profile--information{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+    align-content: space-around;
+    justify-content: flex-start;
+}
+.personal-info{
+    flex:1 1 100%;
+    display:flex;
+    gap:30px;
+}
+.vehicle-info{
+    flex:1 1 100%;
+    display:flex;
+    gap:30px;
+}
+.profile-info-lable > p{
+    font-weight: 600;
+    font-size:1.8rem;
+
+}
+.profile-info-lable > p > span{
+    font-weight: lighter;
+    color:#6e6e6e;
+}
+.profile-button{
+    transition:0.5s;
+    align-self:end;
+    background-color:rgb(30, 105, 190);
+    font-family: 'Archivo-Narrow';
+    font-weight:400;
+    color:rgb(255, 255, 255);
+    border-radius:5px;  
+    font-size: 1.9rem;
+    padding:10px 25px;
+}
+.profile-button:hover{
+    background-color:rgb(30, 190, 83);
+
+}

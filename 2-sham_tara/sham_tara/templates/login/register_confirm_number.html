@@ -1,0 +1,31 @@
+{% extends "base-index.html" %}
+{% load static %}
+
+{% block head-title %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <title>register</title>
+{% endblock %}
+
+{% block main %}
+    <div class="register-form-container">
+        <div class="form-container">
+            <div class="form--title">
+                <p>
+                    Confirm your number
+                </p>
+            </div>
+            <form action="{% url 'user_profile' %}" class="register-form">
+                <input type="text" class="form--input" placeholder="Code you have recived" name="sms-code" required>
+                <div class=form--checkbox-container>
+                    <div>
+                        <a href="#">Resend Code</a>
+                    </div>
+                </div>
+                <input type="submit" class="form--button" value="Submit">
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+
+

@@ -1,17 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    direction: ltr;
-}
-html{
-    font-size:10px;
-}
-body{
-    font-size:1.6rem;
-}
-a{
-    text-decoration: none;
-}
 @font-face {
     font-family:'Archivo-Narrow';
     src: url('../fonts/ArchivoNarrow/ArchivoNarrow-Regular.ttf') format('truetype');
@@ -23,6 +9,21 @@ a{
 @font-face {
     font-family:'Merriweather';
     src: url('../fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+}
+* {
+    padding: 0;
+    margin: 0;
+    direction: ltr;
+}
+html{
+    font-size:10px;
+}
+body{
+    font-size:1.6rem;
+    font-family:'Josefin-Sans';
+}
+a{
+    text-decoration: none;
 }
 .menu-container{
     width:100%;
