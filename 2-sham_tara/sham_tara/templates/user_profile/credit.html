@@ -1,0 +1,26 @@
+{% extends "user_profile/user_profile_base_index.html" %}
+{% load static %}
+
+{% block second-head-title %}
+    <link rel="stylesheet" href="{% static 'css/credit.css' %}">
+    <title>Submit Discount</title>
+{% endblock %}
+
+{% block menu_content_container %}
+    <div class="content-container">
+        <div class="charge-container">
+            <p>
+                Charge your wallet to pay by credit, Easier and faster.
+            </p>
+            <input type="text" placeholder="Enter the value" name="charge-count" id="charge-count">
+            <input type="submit" value="Submit" id="charge-button">
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+{% block script %}
+
+{% endblock %}
