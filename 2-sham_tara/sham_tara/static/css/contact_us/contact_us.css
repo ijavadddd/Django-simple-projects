@@ -54,3 +54,30 @@
 #submit-button:hover{
     background-color:#09c26d;
 }
+.offline-contact-us-container{
+    margin:50px 0;
+}
+.offline-contact-us-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+.mobile-number-container p:nth-child(1){
+    font-size:3rem;
+    font-family:'Archivo-Narrow';
+    font-weight: 800;
+}
+.mobile-number{
+    margin:10px 50px;
+    font-size:1.8rem;
+    font-weight: 600;
+    line-height:2.6rem;
+
+}
+.social-media{
+    display:flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
