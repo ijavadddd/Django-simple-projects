@@ -1,0 +1,23 @@
+{% extends 'base-index.html' %}
+{% load static %}
+
+{% block head-title %}
+    <link rel="stylesheet" href="{% static 'css/contact_us/contact_us.css' %}">
+    <title>Contact us</title>
+{% endblock %}
+{% block main %}
+    <div class="container">
+        <div class="center-container">
+            <div class="contact-us-conatiner">
+                <h3>
+                    Contact us
+                </h3>
+                <form action="#" class="contact-us-form">
+                    <input type="text" placeholder="Enter the Subject" name="subject" id="description-subject">
+                    <textarea name="description" id="description" placeholder="your message"></textarea>
+                    <input type="submit" value="Submit" id="submit-button">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
