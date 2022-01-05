@@ -12,3 +12,9 @@ def car_rescuer(request):
         'media':settings.MEDIA_URL,
     }
     return render(request,'user_profile/car_rescuer.html',context)
+
+def discount(request):
+    context={
+        'media':settings.MEDIA_URL,
+    }
+    return render(request,'user_profile/discount.html',context)

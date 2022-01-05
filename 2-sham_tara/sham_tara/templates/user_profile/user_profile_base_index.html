@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block head-title %}
-    <link rel="stylesheet" href="{% static 'css/user_profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/user_profile_base_style.css' %}">
     {% block second-head-title %}
     <title>Panel</title>
     {% endblock %}
@@ -29,7 +29,7 @@
                         <a href="{% url 'car_rescuer' %}">Request car assistance</a>
                     </li>
                     <li class="vertical-menu--item">
-                        <a href="#">Discount code</a>
+                        <a href="{% url 'discount' %}">Discount code</a>
                     </li>
                     <li class="vertical-menu--item">
                         <a href="#">Submitting a complaint</a>
@@ -37,7 +37,9 @@
                 </ul>
             </div>
         </div>
-    {% block menu_content_container %}{% endblock %}
+        <div class="menu-content-container">
+        {% block menu_content_container %}{% endblock %}
+        </div>
     </div>
 {% endblock %}
 
