@@ -6,6 +6,7 @@ urlpatterns = [
     path('/car_rescuer',views.car_rescuer,name="car_rescuer"),
     path('/discount',views.discount,name="discount"),
     path('/credit',views.credit,name="credit"),
+    path('/complaint',views.complaint,name="complaint"),
     
 ]
 

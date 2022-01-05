@@ -15,3 +15,6 @@ def discount(request):
 
 def credit(request):
     return render(request,'user_profile/credit.html',context)
+
+def complaint(request):
+    return render(request,'user_profile/complaint.html',context)
