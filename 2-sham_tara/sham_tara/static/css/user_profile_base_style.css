@@ -41,8 +41,11 @@
     text-align: left;
     transition:0.5s;
 }
+.vertical-menu li:nth-child(3) a{
+    background-color: #49662e;
+}
 .vertical-menu--item > a:hover{
-    background-color: rgb(15 96 144);
+    background-color: rgb(15 96 144)!important;
 }
 .vertical-menu li:nth-child(2) a{
     /* position: relative; */
