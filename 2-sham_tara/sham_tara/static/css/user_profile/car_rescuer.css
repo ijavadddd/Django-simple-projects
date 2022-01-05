@@ -14,6 +14,11 @@
     padding:12px 20px;
     box-sizing: border-box;
 }
+#map{
+    width:100%;
+    max-width:min(450px,80%);
+    min-height: 350px; 
+}
 .request-Title h4{
     font-size: 3rem;
     font-weight: 900;

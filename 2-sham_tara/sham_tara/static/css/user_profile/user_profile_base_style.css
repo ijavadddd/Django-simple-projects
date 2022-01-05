@@ -5,7 +5,8 @@
     display:flex;
 }
 .sidebar-menu-container{
-    width:max(20%,30ch);
+    width:100%;
+    max-width: min(50%,22ch);
     /* min-height:800px; */
     background-color:#3a3a3a;
     overflow:hidden;
