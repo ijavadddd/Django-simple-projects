@@ -1,7 +1,7 @@
 .home-slide{
     width:100%;
     height:80vh;
-    background-image: url(../../media/images/home-slide.jpg);
+    background-image: url(../../../media/images/home-slide.jpg);
     background-color: rgb(138 138 138 / 85%);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -60,7 +60,7 @@
     margin:0 auto;
     /* border-radius:100%; */
     min-height:415px;
-    background-image: url(../../media/images/car_rescuer.jpg);
+    background-image: url(../../../media/images/car_rescuer.jpg);
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -160,7 +160,7 @@
   /* text-align: center; */
 }
 #first-step{
-    background-image:url(../../media/images/first-step-back1.jpg);
+    background-image:url(../../../media/images/first-step-back1.jpg);
     background-blend-mode: multiply;
     background-color: #ddddddd9;
     background-position: top center;
