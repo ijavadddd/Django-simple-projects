@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 .form-container{
-    width:max(35%,50ch);
+    width:100%;
+    max-width:min(700px,70%);
     background-color:rgb(252, 252, 252);
     /* min-height:500px; */
     margin:0 auto;
@@ -47,6 +48,7 @@
     box-shadow: 0 5px 5px #eeeeee;
 }
 .form--checkbox-container{
+    width: 50%;
     display:flex;
     align-items:center;
     font-family:'Josefin-Sans' ;
