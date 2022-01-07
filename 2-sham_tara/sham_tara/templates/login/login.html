@@ -1,19 +1,23 @@
-{% extends "base-index.html" %}
+{% extends "base_index.html" %}
 {% load static %}
 
-{% block head-title %}
+{% block head_title %}
     <link rel="stylesheet" href="{% static 'css/login/login.css' %}">
     <title>Login</title>
 {% endblock %}
 
 {% block main %}
+    <!-- PAGE CONTAINER -->
     <div class="login-form-container">
+        <!-- FORM PAGE CONTAINER -->
         <div class="form-container">
+            <!-- LOGIN CONTAINER TITLE -->
             <div class="form--title">
                 <p>
                     Login
                 </p>
             </div>
+            <!-- LOGIN FORM -->
             <form action="{% url 'user_profile' %}" class="login-form">
                 <input type="text" class="form--input" placeholder="Mobile number" name="mobile-number" required>
                 <input type="password" class="form--input" placeholder="Password" name="password" id="password" required>

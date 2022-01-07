@@ -1,17 +1,22 @@
-{% extends 'base-index.html' %}
+{% extends 'base_index.html' %}
 {% load static %}
 
-{% block head-title %}
+{% block head_title %}
     <link rel="stylesheet" href="{% static 'css/about_us/about_us.css' %}">
     <title>About us</title>
 {% endblock %}
 {% block main %}
+    <!-- MAIN BODY CONTAINER -->
     <div class="container">
+        <!-- CENTER CONTAINER -->
         <div class="middel-center">
+            <!-- CONTAINER TITLE -->
             <h1>
                 A little about me
             </h1>
+            <!-- ABOUT DESCRIPTION , INCLUDE IMAGE , FIRST NAME , LAST NAME AND SOCIAL MEDIS -->
             <div class="about-me-container">
+                <!-- MY ABOUT IMAGE -->
                 <img src="{{media}}images/javad-ghasemi.jpg" alt="javad-ghasemi.jpg" class="profile-photo">
                 <div class="right-description-container">
                     <div class="description">
@@ -46,8 +51,8 @@
             </div>
             <div class="description-about-me">
                 I am Computer Engineering student and a Certified Python Developer.
-Also I dominance at Django framework.
-I love programming and and it's challenges and would 💖 to grow my knowledge in these Technologies.
+                Also I dominance at Django framework.
+                I love programming and and it's challenges and would 💖 to grow my knowledge in these Technologies.
             </div>
         </div>
     </div>

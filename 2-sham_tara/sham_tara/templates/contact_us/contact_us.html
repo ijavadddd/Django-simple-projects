@@ -1,22 +1,28 @@
-{% extends 'base-index.html' %}
+{% extends 'base_index.html' %}
 {% load static %}
 
-{% block head-title %}
+{% block head_title %}
     <link rel="stylesheet" href="{% static 'css/contact_us/contact_us.css' %}">
     <title>Contact us</title>
 {% endblock %}
 {% block main %}
+    <!-- BODY CONTAINER -->
     <div class="container">
         <div class="center-container">
             <div class="contact-us-conatiner">
                 <h3>
                     Contact us
                 </h3>
+                <!-- CONTACT US FORM -->
                 <form action="#" class="contact-us-form">
+                    <!-- FORM SUBJECT FORM -->
                     <input type="text" placeholder="Enter the Subject" name="subject" id="description-subject">
+                    <!-- FORM TEXT BOX MESSAGE -->
                     <textarea name="description" id="description" placeholder="your message"></textarea>
+                    <!-- FORM SUBMIT BUTTON -->
                     <input type="submit" value="Submit" id="submit-button">
                 </form>
+                <!-- OFFLINE METHODS CONTAINER -->
                 <div class="offline-contact-us-container">
                     <div class="mobile-number-container">
                         <p><strong>Contact number</strong></p>
@@ -27,6 +33,7 @@
                             +68-369-1247
                         </p>       
                     </div>
+                    <!-- SOCIAL MEDIA CONTACT -->
                     <div class="social-media">
                         <div class="social-media--item">
                             <a href="https://www.linkedin.com/in/ijavadddd/" target="_blank">
