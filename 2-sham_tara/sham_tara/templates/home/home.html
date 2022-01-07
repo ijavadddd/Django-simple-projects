@@ -1,35 +1,43 @@
-{% extends "base-index.html" %}
+{% extends "base_index.html" %}
 {% load static %}
 
-{% block head-title %}
+{% block head_title %}
     <link rel="stylesheet" href="{% static 'css/home/home.css' %}">
     <title>Relief workers</title>
 {% endblock %}
 
 {% block main %}
+    <!-- HEADER DESCRIBE SLIDE -->
     <div class="home-slide">
+        <!-- SLIDE TITLE -->
         <div class="slider--title">
             <p>
                 Relief vehicle : we keep you on the road
             </p>
         </div>
+        <!-- SLIDE DESCRIPTION -->
         <div class="slider--description">
             <p>
                 Going out to meet customers or delivering on time are crucial for your employees. A relief vehicle is of the essence, which is why, no matter what happens, we will provide a replacement car or van to keep your business on the road.
             </p>
         </div>
     </div>
+    <!-- DESCRIBE HOW TO USE CONTAINER -->
     <div class="car-rescuer--center-container">
-    <div class="need-car-rescuer">
-        <div class="cover-car-rescuer">
-            <!-- <img src="{{media}}images/car_rescuer.jpg" alt="car_rescuer"> -->
-        </div>
-        <div class="car-rescuer">
+        <!-- CENTER CONTAINER  -->
+        <div class="need-car-rescuer">
+            <!-- IMG CONTAINER -->
+            <div class="cover-car-rescuer"></div>
+            <!-- HOW TO USE DESCRIPTION CONTAINER -->
+            <div class="car-rescuer">
+                <!-- HOW TO USE TITLE -->
                 <h2 class="car-rescuer--title">Need a car rescuer?</h2>
+                <!-- HOW TO USE DESCRIPTION -->
                 <p class="car-rescuer--description">
                     Need help? , we are here<br>
                     We are at your service anytime, anywhere , Just login to your account or register to access the facilities
                 </p>
+                <!-- HOW TO USE BUTTONS -->
                 <div class="access-service">
                     <ul class="access-service--list">
                         <li class="access-service--list-item">
@@ -40,6 +48,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- HOW TO USE OFFLINE DESCRIPTION CONTAINER  -->
                 <div class="access-service--offline">
                     <p class="access-service--offline__title">
                         Do you need offline access?!
@@ -56,10 +65,13 @@
             </div>
         </div>
     </div>
+    <!-- WORK STEP CONTAINER -->
     <div class="work-steps" id="work-step">
+        <!-- TOP CONTAINERS BUTTONS -->
         <button class="tablink" onclick="openstep('first-step', this)" id="defaultOpen">First step</button>
         <button class="tablink" onclick="openstep('second-step', this)">Second step</button>
         <button class="tablink" onclick="openstep('third-step', this)">Third step</button>
+        <!-- FIRST STEP CONTAINER -->
         <div id="first-step" class="tabcontent">
             <div class="step-container">
                 <h4 class="step-title">Call us</h4>
@@ -96,7 +108,7 @@
             </div>
         </div>
         </div>
-        
+        <!-- SECOND STEP CONTAINER -->
         <div id="second-step" class="tabcontent">
             <div class="step-container second-step-container">
                 <div class="second-step-descrption">
@@ -109,7 +121,7 @@
                 </div>
             </div>
         </div>
-        
+        <!-- THIRD STEP CONTAINER -->
         <div id="third-step" class="tabcontent">
             <div class="third-step-container">
                 <div class="third-step-description">
@@ -122,33 +134,29 @@
                 </div>
             </div>
         </div>
-            
-
     </div>
 {% endblock %}
 {% block script %}
 <script>
-    function openstep(stepName, elmnt) {
-        // Hide all elements with class="tabcontent" by default */
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+function openstep(stepName, elmnt) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
 }
-
-  // Remove the background color of all tablinks/buttons
+// Remove the background color of all tablinks/buttons
 tablinks = document.getElementsByClassName("tablink");
 for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
 }
 
-  // Show the specific tab content
+// Show the specific tab content
 document.getElementById(stepName).style.display = "block";
 
-  // Add the specific color to the button used to open the tab content
+// Add the specific color to the button used to open the tab content
 elmnt.style.backgroundColor = '#50a036';
 }
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>

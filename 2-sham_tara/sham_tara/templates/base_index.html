@@ -2,26 +2,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- HEAD PARTIAL -->
     {% include "partials/head.html" %}
-    {% block head-meta %}{% endblock %}
-    {% block head-title %}
+    {% block head_meta %}{% endblock %}
+    {% block head_title %}
         <title>Relief workers</title>
     {% endblock %}
     </head>
     <body>
 
-        <!-- HEADER PARTIALS -->
+        <!-- HEADER PARTIAL -->
         {% include "partials/header.html" %}
 
         <!-- TEMPLATE BODY CONTENT -->
         {% block main %}{% endblock %}
 
-        <!-- FOOTER PARTIALS -->
+        <!-- FOOTER PARTIAL -->
         {% include "partials/footer.html" %}
 
     </body>
     {% block script %}{% endblock %}
 
-    <!-- SCRIPT PARTIALS -->
+    <!-- SCRIPT PARTIAL -->
     {% include "partials/script.html" %}
 </html>
