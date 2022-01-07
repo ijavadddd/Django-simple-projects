@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        {% include 'partial/head.html' %}
+        {% block title_section %}
+            {% comment %}
+                <!-- HERE YOU CAN PUT YOU CSS STYLE LINK OR YOUR NEW TITLE OR META TAGS OR ANY SPECIAL DATA YOU WANT TO ADD TO YOUR SPECIFIC PAG -->
+            {% endcomment %}
+            <title>Jewelry Galley</title>
+        {% endblock %}
+    </head>
+    <body>
+        <!-- HEADER SECTION → ICLUDE MENU , LOGO , SEARCH-INPUT AND USER CART AND ... -->
+        <header class="header-container">
+            <div class="header-container--elemets">
+                <!-- SLICE HEADER TO TWO SECTION → TOP AND BOTTOM CONTAINER -->
+                <div class="top-header-container">
+                    <!-- TOP CONTAINER INCLUDE LOGO , CART AND PROFILE ICON , SEARCH-INPUT AND MOBILE MENU -->
+                    <div class="column-4 search-container">
+                        <div class="top-header-search search-container-input">
+                            <input type="text" placeholder="Search..." autocomplete="off" name="search" id="search">
+                            <div class="button-container">
+                                <button type="submit" id="search-btn">
+                                    <i class="bi bi-search search-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="contact-icons">
+                            <div class="contact-method">
+                                <a href="tel:06589655" target="_blank" data-label="Phone" rel="noopener noreferrer nofollow" aria-label="Call us">
+                                    <i class="bi bi-phone"></i>
+                                </a>
+                            </div>
+                            <div class="contact-method">
+                                <a href="mailto:ijavaddddd@gmail.com" data-label="E-mail" rel="nofollow" aria-label="Email us">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-4 logo-container">
+                        <img src="{{media}}images/logo/header-logo.png" alt="MY title">
+                    </div>
+                    <div class="column-4 profile-cart-container">
+                        <div class="profile-container">
+                            <ul class="profile-container--list">
+                                <li class="profile-container--item profile-icon">
+                                    <a href="#">
+                                        <i class="bi bi-basket-fill"></i>
+                                    </a>
+                                </li>
+                                <li class="profile-container--item user-cart">
+                                    <a href="#">
+                                        <i class="bi bi-person-fill"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bottom-header-container">
+                    <div class="menu-container">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Store</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Man</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Woman</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Contact us</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">About us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="responsive-menu-container">
+                        <div class="responsive-menu">
+                            <div class="toggle-menu-container">
+                                <a href="#" class="toggle-icon" id="responsive-btn" onclick="responsive_menu()">
+                                    <i class="bi bi-list"></i>
+                                </a>
+                            </div>
+                            <div class="responsive-menu-list" id="responsive-menu-item-container">
+                                <div class="responsive-search-conrainer">
+                                    <div class="search-container-input">
+                                        <input type="text" placeholder="Search..." autocomplete="off" name="search" class="responsive-search" id="search">
+                                        <div class="button-container">
+                                            <button type="submit" id="search-btn">
+                                                <i class="bi bi-search search-icon"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="reponsive-menu--item">
+                                    Home
+                                </a>
+                                <a href="#" class="reponsive-menu--item">
+                                    Store
+                                </a>
+                                <a href="#" class="reponsive-menu--item">
+                                    Man
+                                </a>
+                                <a href="#" class="reponsive-menu--item">
+                                    Woman
+                                </a>
+                                <a href="#" class="reponsive-menu--item">
+                                    Contact us
+                                </a>
+                                <a href="#" class="reponsive-menu--item">
+                                    About us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
+    {% include 'partial/script.html' %}
+</html>
