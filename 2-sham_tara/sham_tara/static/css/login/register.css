@@ -48,6 +48,8 @@
     box-shadow: 0 5px 5px #eeeeee;
 }
 .form--checkbox-container{
+    width: 85%;
+    margin:5px 20px;
     display:flex;
     flex-wrap: wrap;
     gap:20px;
