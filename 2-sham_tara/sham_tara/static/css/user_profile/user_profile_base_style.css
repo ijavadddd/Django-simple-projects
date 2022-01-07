@@ -1,3 +1,6 @@
+.primary-menu-container{
+    display: none;
+}
 .panel-container{
     width:100%;
     background-color:rgb(241, 241, 241);

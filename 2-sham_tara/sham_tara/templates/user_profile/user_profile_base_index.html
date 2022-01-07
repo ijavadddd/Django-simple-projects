@@ -11,33 +11,41 @@
 {% block main %}
     <div class="panel-container">
         <div class="sidebar-menu-container" id="vertical-menu-container">
-            <div class="menu-container" >
-                <div class="vertical-menu-menu-container">
-                    <ul class="vertical-menu">
-                        <li class="vertical-menu--item">
-                            <a href="{% url 'user_profile' %}">Profile</a>
-                        </li>
-                        <li class="vertical-menu--item">
-                            <a href="{% url 'credit' %}">Credit
-                                <div class="credit-label">
-                                    <span>
-                                        10000000$
-                                    </span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="vertical-menu--item">
-                            <a href="{% url 'car_rescuer' %}">Request car assistance</a>
-                        </li>
-                        <li class="vertical-menu--item">
-                            <a href="{% url 'discount' %}">Discount code</a>
-                        </li>
-                        <li class="vertical-menu--item">
-                            <a href="{% url 'complaint' %}">Submitting a complaint</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <ul class="vertical-menu">
+                <li class="vertical-menu--item">
+                    <a href="{% url 'user_profile' %}">Profile</a>
+                </li>
+                <li class="vertical-menu--item">
+                    <a href="{% url 'credit' %}">Credit
+                        <div class="credit-label">
+                            <span>
+                                10000000$
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="vertical-menu--item">
+                    <a href="{% url 'car_rescuer' %}">Request car assistance</a>
+                </li>
+                <li class="vertical-menu--item">
+                    <a href="{% url 'discount' %}">Discount code</a>
+                </li>
+                <li class="vertical-menu--item">
+                    <a href="{% url 'complaint' %}">Submitting a complaint</a>
+                </li>
+                <li class="vertical-menu--item">
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="vertical-menu--item">
+                    <a href="{% url 'home' %}#work-step">How</a>
+                </li>
+                <li class="vertical-menu--item">
+                    <a href="{% url 'about_us' %}">About US</a>
+                </li>
+                <li class="vertical-menu--item">
+                    <a href="{% url 'contact_us' %}">Contact US</a>
+                </li>
+            </ul>
         </div>
         <div class="menu-content-container">
             <div class="sidebar-menu-container--btn">
