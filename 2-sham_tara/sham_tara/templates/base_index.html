@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {% include "partials/head.html" %}
+    {% block head-meta %}{% endblock %}
+    {% block head-title %}
+        <title>Relief workers</title>
+    {% endblock %}
+    </head>
+    <body>
+
+        <!-- HEADER PARTIALS -->
+        {% include "partials/header.html" %}
+
+        <!-- TEMPLATE BODY CONTENT -->
+        {% block main %}{% endblock %}
+
+        <!-- FOOTER PARTIALS -->
+        {% include "partials/footer.html" %}
+
+    </body>
+    {% block script %}{% endblock %}
+
+    <!-- SCRIPT PARTIALS -->
+    {% include "partials/script.html" %}
+</html>

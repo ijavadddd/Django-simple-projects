@@ -1,0 +1,41 @@
+        <!-- HEADER CONTAINER INCLUDE MENU AND LOGIN ,REGISTER  -->
+        <header class="menu-container">
+            <!-- MENU AND LOGIN ... ROW CONTAINER -->
+            <div class="header-menu-container">
+                <!-- HEADER MENU CONTAINER -->
+                <div class="header-menu">
+                    <ul class="header-menu--list">
+                        <!-- MENU LINKS -->
+                        <li class="">
+                            <a href="#" class="header-menu--logo">
+                                <img src="{{media}}images/logo/logo.png" alt="Sham_Tara">
+                            </a>
+                        </li>
+                        <li class="header-menu--list__item">
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="header-menu--list__item">
+                            <a href="{% url 'home' %}#work-step">How</a>
+                        </li>
+                        <li class="header-menu--list__item">
+                            <a href="{% url 'about_us' %}">About US</a>
+                        </li>
+                        <li class="header-menu--list__item">
+                            <a href="{% url 'contact_us' %}">Contact US</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- LOGIN REGISTER BUTTON CONTAINER -->
+                <div class="header-panel">
+                    <ul class="header-panel--list">
+                        <li class="header-panel--list-item">
+                            <a href="{% url 'login' %}" blank="_blank">Login</a>
+                        </li>
+                        <li class="header-panel--list-item">
+                            <a href="{% url 'register' %}" blank="_blank">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
