@@ -56,9 +56,8 @@
 .vehicle-info{
     flex:1 1 100%;
     display:flex;
-    gap:30px;
-    display: flex;
     flex-wrap: wrap;
+    gap:30px;
 }
 .profile-info-lable > p{
     font-weight: 600;
@@ -131,7 +130,21 @@
 .profile-options--item__description span{
     color: #c49a00;
 }
-
+@media screen and (max-width:720px){
+    .personal-info {
+        justify-content: center;
+    }
+    .vehicle-info {
+        justify-content: center;
+    }
+    .profile--information {
+        align-content: center;
+        justify-content: center;
+    }
+    .profile-container {
+        width: 100%;
+    }
+}
 
 
 
