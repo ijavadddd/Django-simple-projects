@@ -43,6 +43,34 @@ a{
     margin: 0 auto;
     overflow: hidden;
 }
+.mobile-menu-container{
+    display:none;
+}
+.reponsive-menu-container--btn{
+    color:#000;
+    position: relative;
+    inset:auto auto auto 4px;
+    cursor:pointer;
+    width:fit-content;
+    height:fit-content;
+}
+.reponsive-menu-container--btn >i{
+    font-size:6rem;
+}
+.header-mobile-menu{
+    display:none;
+    /* position:absolute; */
+    inset:0 0 0 0;
+}
+.header-mobile-menu--list{
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+.show-menu{
+    display: block !important;;
+}
 .header-menu--list{
     list-style: none;
     display:flex;
@@ -66,6 +94,24 @@ a{
     list-style:none;
     display:flex;
     gap:20px;
+}
+.header-mobile-menu--list__item{
+    color:#000;
+    background-color:#f4f4f4;
+    padding:0.8em 2em;
+}
+.header-mobile-menu--list__item a{
+    color:#000;
+    font-weight:bold;
+    font-size:1.5rem;
+}
+.mobile-menu--login__item, .mobile-menu--login__item a{
+    background-color: #136a9d;
+    color: #fff !important;;
+}
+.mobile-menu--register__item{
+    background-color: rgb(0, 255, 76);
+
 }
 .header-panel--list-item{
     position: relative;
@@ -169,4 +215,14 @@ a{
     justify-content: flex-end;
     align-items: center;
     gap:30px;
+}
+@media screen and (max-width:720px){
+    .mobile-menu-container{
+        display: inline-block;
+        width: 100%;
+    }
+    .header-menu-container {
+        overflow:unset;
+        display:none;
+    }
 }

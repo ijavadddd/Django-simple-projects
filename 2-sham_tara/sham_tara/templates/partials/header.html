@@ -37,5 +37,34 @@
                     </ul>
                 </div>
             </div>
+            <!-- RESPONSIVE MENU FOR SMALL DEVICE -->
+            <div class="mobile-menu-container">
+                <div class="reponsive-menu-container--btn" onclick="responsive_menu()">
+                    <i class="bi bi-list"></i>
+                </div>
+                <div class="header-mobile-menu"  id="primary-mobile-menu-container">
+                    <ul class="header-mobile-menu--list">
+                        <!-- MENU LINKS -->
+                        <li class="header-mobile-menu--list__item">
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="header-mobile-menu--list__item">
+                            <a href="{% url 'home' %}#work-step">How</a>
+                        </li>
+                        <li class="header-mobile-menu--list__item">
+                            <a href="{% url 'about_us' %}">About US</a>
+                        </li>
+                        <li class="header-mobile-menu--list__item">
+                            <a href="{% url 'contact_us' %}">Contact US</a>
+                        </li>
+                        <li class="header-mobile-menu--list__item mobile-menu--login__item">
+                            <a href="{% url 'login' %}" blank="_blank">Login</a>
+                        </li>
+                        <li class="header-mobile-menu--list__item mobile-menu--register__item">
+                            <a href="{% url 'register' %}" blank="_blank">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
 

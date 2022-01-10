@@ -129,4 +129,7 @@
     .menu-content-container{
         width:100%;
     }
+    .credit-label{
+        display:none;
+    }
 }
