@@ -1,2 +1,39 @@
 {% extends 'base_index.html' %}
 {% load static %}
+{% block title_section %}
+            <link rel="stylesheet" href="{% static 'css/home/home.css' %}">
+            <title>Jewelry Galley</title>
+{% endblock %}
+{% block main_content %}
+    <div class="product-slide">
+        <div class="product-slide--link">
+            <a href="#"></a>
+        </div>
+    </div>
+    <div class="sex-category-container">
+        <div class=sex-category-container--center>
+            <div class="sex-category--box">
+                <a href="#">
+                    <div class="sex-category--box__background man-category">
+                        <div class="sex-category--box__title-container">
+                            <h2 class="sex-category--box__title">
+                                Men's jewelry
+                            </h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sex-category--box">
+                <a href="#">
+                    <div class="sex-category--box__background woman-category">
+                        <div class="sex-category--box__title-container">
+                            <h2 class="sex-category--box__title">
+                                Women's jewelry
+                            </h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

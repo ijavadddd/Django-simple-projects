@@ -1,0 +1,75 @@
+.product-slide{
+    width:100%;
+    height: 36vw;
+    background-image: url(../../../media/images/home-slider.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+.product-slide--link a{
+    position: absolute;
+    inset:0 0 0 0;
+    width:100%;
+    height:100%;
+}
+.sex-category-container{
+    width:100%;
+}
+.sex-category-container--center{
+    width:100%;
+    padding:20px;
+}
+.sex-category-container--center{
+    margin:0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px;
+}
+.sex-category--box{
+    min-width: min(39ch,95%);
+    width: 30%;
+    max-width: 400px;
+    min-height: min(82vmin,56ch);
+    height: 395px;
+    max-height: 600px;
+} 
+.sex-category--box__background{
+    transition-property:transform ,background-color ;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color:#000;
+}
+.sex-category--box__background:hover{
+    background-color: rgba(117, 24, 194, 0.555);
+    background-blend-mode: multiply;
+    transform: scale(1.025);
+    
+}
+.man-category{
+    background-image: url(../../../media/images/Men-jewelry.jpg)
+}
+.woman-category{
+    background-image: url(../../../media/images/Women-jewelry.jpg)
+}
+.sex-category--box__title-container{
+    position: absolute;
+    inset: auto auto 0 0;
+    background-color: #d2d2d2a6;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-self: center;
+}
+.sex-category--box__title{
+    width: 100%;
+
+}
