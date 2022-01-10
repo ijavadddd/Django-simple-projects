@@ -125,7 +125,7 @@ a{
     color:#fff;
     font-size:1.4rem;
 }
-.contact-icons{
+.contact-icons {
     width: 25%;
     display: flex;
     justify-content: flex-start;
@@ -133,9 +133,17 @@ a{
     gap:20px;
     padding:15px;
 }
-.contact-method > a > i{
+.mobile-cart{
+    display: none;
+    position: relative;
+}
+.responsive-menu-list{
+    display: none!important;
+}
+.contact-method i ,
+.mobile-cart i{
     transition:0.3s;
-    font-size: 1.3rem;
+    font-size: 2.5rem;
     color: #fff;
 } 
 .contact-method > a:hover i{
@@ -149,6 +157,22 @@ a{
 }
 .profile-cart-container{
     position: relative;
+}
+.user-cart{
+    position: relative;
+}
+.cart-counter{
+    color:#fff;
+    position:absolute;
+    inset:auto -10px -10px auto;
+    width:20px;
+    height:20px;
+    background-color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:14px;
+    border-radius: 50%;
 }
 .profile-container{
     position:absolute;
@@ -217,23 +241,25 @@ a{
     /* position: relative; */
     float: right;
 }
-#responsive-btn{
-    position: absolute;
-    right:10px;
-    bottom:10px;
-}
 @media screen and (max-width:850px){
     .search-container-input {
         position: relative;
         width: 100%;
     }
     .profile-container ,
-    .top-header-search{
+    .top-header-search ,
+    .contact-method{
         display:none;
+    }
+    .mobile-cart{
+        display: flex;
     }
     .responsive-menu{
         display: flex;
         flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .search-container {
         justify-content: flex-start;
     }
     .bottom-header-container > .menu-container{
