@@ -116,6 +116,7 @@ body{
 }
 .person-icon{
     max-width: 75%;
+    min-height: 255px;
     height: auto;
     background-color: #fff;
     overflow: hidden;
