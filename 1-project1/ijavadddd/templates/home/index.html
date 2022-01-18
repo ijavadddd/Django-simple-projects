@@ -26,28 +26,26 @@
         </div>
             <div class="teacher-introduce">
                         {% for person in teacher %}
-                            {% if person.age <= 20 %}
+                            {% if person.Age <= 20 %}
                                 <div class="teacher-box teacher-box--red">
-                            {% elif person.age >= 20 and person.age <= 40 %}
+                            {% elif person.Age >= 20 and person.Age <= 40 %}
                             <div class="teacher-box teacher-box--blue">
-                            {% elif person.age > 40 %}
+                            {% elif person.Age > 40 %}
                                 <div class="teacher-box teacher-box--green">
                             {% endif %}
                             <div class="person-icon">
-                                <img src="{{media_url}}{{person.profile}}" alt="{{person.firstName}}_{{person.lastName}}">
+                                <img src="{{media_url}}{{person.ProfilePhoto}}" alt="{{person.firstName}}_{{person.lastName}}">
                             </div>
                             <div class="box-description">
-                                <p class="description-items">نام مدرس : {{person.firstName}} {{person.lastName}}</p>
-                                <p class="description-items">سن : : {{person.age}}</p>
+                                <p class="description-items">نام مدرس : {{person.FirstName}} {{person.LastName}}</p>
+                                <p class="description-items">سن : : {{person.Age}}</p>
                                 <p class="description-items">
                                     مهارت ها : 
-                                    {% for skill in person.skills %}
-                                        <strong>{{skill}}</strong>،
-                                    {% endfor %}
+                                        <strong>{{person.Skill}}</strong>
                                 </p>
                                 <hr class="description-divider">
                                 <div class="skill-icon">
-                                {% for skill in person.skills %}
+                                {% for skill in person.Skill %}
                                     {% if skill == 'Python' %}
                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                 width="30" height="30"
