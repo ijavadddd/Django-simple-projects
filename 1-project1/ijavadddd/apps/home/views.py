@@ -1,16 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
-from .models import Professor
+from .models import Autor
+
+
+
 def index(request):
-    professors=Professor.objects.all()
-    for professor in professors:
-        for skills in professor.Skill:
-            skillList=skills.split()
-            skills='ddsss'
+    Autors=Autor.objects.all()
     context={
         'media_url':settings.MEDIA_URL,
-        'teacher':professors,
-        'lenList':range(0 , len(professors)),
+        'professor':Autors,
+        'lenList':range(0 , len(Autors)),
     }
     return render(request,'home/index.html',context)

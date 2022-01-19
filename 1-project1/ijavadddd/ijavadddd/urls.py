@@ -9,3 +9,6 @@ urlpatterns = [
     path('login',include('apps.login.urls')),
     path('contact_us',include('apps.contact_us.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = 'پنل مدیریت فروشگاه'
+admin.site.index_title = 'به پنل مدیریت فروشگاه خوش آمدید'
