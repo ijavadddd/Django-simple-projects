@@ -16,7 +16,7 @@ a{
 }
 .header-container{
     width:100%;
-    min-height:138px;
+    min-height:148px;
     background-color:#000;
 }
 .header-container--elemets{
@@ -214,18 +214,19 @@ a{
     padding: 0;
 }
 .menu-container > .menu-list >.menu-item{
-    padding:0.52em 0.9em;
+    margin:0.52em 0 0 0.2em;
     /* box-sizing: border-box; */
 }
 .menu-container > .menu-list > .menu-item a{
     transition:0.4s;
     color:#fff;
     /* background-color:yellow; */
-    padding:inherit;
+    padding:0.5em 1em;
+    display: inline-block;
     font-size: 1.12rem;
 }
 .menu-container > .menu-list > .menu-item a:hover{
-    background-color:red;
+    background-color:#ad1818;
 }
 .bottom-header-container{
     min-height:40%;
@@ -315,7 +316,7 @@ a{
 #login-register-container{
     position:fixed;
     inset:0 0 0 0 ;
-    z-index: 5;
+    z-index: 999;
     background-color: #0b0b0b60;    
     width: 100%;
     height: 100%;
