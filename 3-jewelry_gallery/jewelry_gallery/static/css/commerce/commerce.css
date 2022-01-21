@@ -4,22 +4,37 @@
     display: flex;
     justify-content: space-around;
     padding:80px 0;
-    gap: 10px;
+    gap: 2px;
 }
 .sidebar-container{
-    width:25%;
+    width:20%;
     min-height:400px;
-    border-right: 1px solid red;
+    /* border-right: 1px solid red; */
+    padding:2rem 1.5rem;
 }
+.sidebar-category--title-container{
+    color:rgb(112 112 112);
+    font-size:1.35rem;
+    font-weight:800;
+}
+.sidebar-category--title-container p{
+    margin:5px 0 12px 0;
+
+}
+.sidebar-category--title-container .border-botttom{
+width:3ch;
+}
+
 .main-container{
     width:75%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap:25px;
+    padding:1rem 1rem;
 }
 .product-box{
-    flex: 0 1 40ch;
+    flex: 0 1 36ch;
     /* width:100%;
     max-width: 40ch; */
     min-height: 424px;
