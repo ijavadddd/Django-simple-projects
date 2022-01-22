@@ -14,6 +14,12 @@ class ProductPropertyAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('ProductTitle','ProductBrand','ProductPrice','ProductDiscount','ProductStatus')
-    search_fields = ('ProductStatus','ProductDiscount','ProductStar')
-    prepopulated_fields = {'Slug':('ProductTitle','ProductBrand')}
+    list_display = ('Title','Brand','Price','Discount','Status')
+    search_fields = ('Status','Discount','Star')
+    prepopulated_fields = {'Slug':('Title','Brand')}
+
+@admin.register(Attribute)
+class AttributeAdmin(admin.ModelAdmin):
+    list_display = ('ProductProperty','Value','AttributeStatus')
+    search_fields = ('AttributeStatus',)
+

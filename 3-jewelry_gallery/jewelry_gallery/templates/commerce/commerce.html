@@ -16,190 +16,42 @@
             </div>
         </div>
         <div class="main-container">
-
+            {% for product in products %}
             <div class="product-box">
                 <div class="product-box--image-container">
-                    <img src="{{media}}images/products/earring.jpg" alt="earrings">
+                    <img src="{{media}}{{product.Image}}" alt="earrings">
                 </div>
                 <div class="product-box--title-container">
                     <a href="#">
                         <h2>
-                            Men / Women Dragon Earrings (Clips)
+                            {{product.Title}}
                         </h2>
                     </a>
                 </div>
                 <div class="product-box--category">
-                    <strong>Gentlemen, earrings</strong>
+                    {% comment %}
+                    {% for category in product.Category %}
+                    <strong>{{Category}}</strong>
+                    {% endfor %}
+                    {% endcomment %}
                 </div>
                 <div class="product-box--details">
                     <div class="old-price-container">
                         <div class="old-price">
-                            <span>5$</span>
+                            <span>{{product.Price}}</span>$
                         </div>
                         <div class="discount">
                             <div>
-                                <span>5</span>%
+                                <span>{{product.Discount}}</span>%
                             </div>
                         </div>
                     </div>
                     <div class="new-price">
-                        <span class="new-price">0.25</span>$
+                        <span class="new-price">{{product.NewPrice}}</span>$
                     </div>
                 </div>
             </div>
-
-
-
-            <div class="product-box">
-                <div class="product-box--image-container">
-                    <img src="{{media}}images/products/earring.jpg" alt="earrings">
-                </div>
-                <div class="product-box--title-container">
-                    <a href="#">
-                        <h2>
-                            Men / Women Dragon Earrings (Clips)
-                        </h2>
-                    </a>
-                </div>
-                <div class="product-box--category">
-                    <strong>Gentlemen, earrings</strong>
-                </div>
-                <div class="product-box--details">
-                    <div class="old-price-container">
-                        <div class="old-price">
-                            <span>5$</span>
-                        </div>
-                        <div class="discount">
-                            <div>
-                                <span>5</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new-price">
-                        <span class="new-price">0.25</span>$
-                    </div>
-                </div>
-            </div>
-            <div class="product-box">
-                <div class="product-box--image-container">
-                    <img src="{{media}}images/products/earring.jpg" alt="earrings">
-                </div>
-                <div class="product-box--title-container">
-                    <a href="#">
-                        <h2>
-                            Men / Women Dragon Earrings (Clips)
-                        </h2>
-                    </a>
-                </div>
-                <div class="product-box--category">
-                    <strong>Gentlemen, earrings</strong>
-                </div>
-                <div class="product-box--details">
-                    <div class="old-price-container">
-                        <div class="old-price">
-                            <span>5$</span>
-                        </div>
-                        <div class="discount">
-                            <div>
-                                <span>5</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new-price">
-                        <span class="new-price">0.25</span>$
-                    </div>
-                </div>
-            </div>
-            <div class="product-box">
-                <div class="product-box--image-container">
-                    <img src="{{media}}images/products/earring.jpg" alt="earrings">
-                </div>
-                <div class="product-box--title-container">
-                    <a href="#">
-                        <h2>
-                            Men / Women Dragon Earrings (Clips)
-                        </h2>
-                    </a>
-                </div>
-                <div class="product-box--category">
-                    <strong>Gentlemen, earrings</strong>
-                </div>
-                <div class="product-box--details">
-                    <div class="old-price-container">
-                        <div class="old-price">
-                            <span>5$</span>
-                        </div>
-                        <div class="discount">
-                            <div>
-                                <span>5</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new-price">
-                        <span class="new-price">0.25</span>$
-                    </div>
-                </div>
-            </div>
-            <div class="product-box">
-                <div class="product-box--image-container">
-                    <img src="{{media}}images/products/earring.jpg" alt="earrings">
-                </div>
-                <div class="product-box--title-container">
-                    <a href="#">
-                        <h2>
-                            Men / Women Dragon Earrings (Clips)
-                        </h2>
-                    </a>
-                </div>
-                <div class="product-box--category">
-                    <strong>Gentlemen, earrings</strong>
-                </div>
-                <div class="product-box--details">
-                    <div class="old-price-container">
-                        <div class="old-price">
-                            <span>5$</span>
-                        </div>
-                        <div class="discount">
-                            <div>
-                                <span>5</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new-price">
-                        <span class="new-price">0.25</span>$
-                    </div>
-                </div>
-            </div>
-            <div class="product-box">
-                <div class="product-box--image-container">
-                    <img src="{{media}}images/products/earring.jpg" alt="earrings">
-                </div>
-                <div class="product-box--title-container">
-                    <a href="#">
-                        <h2>
-                            Men / Women Dragon Earrings (Clips)
-                        </h2>
-                    </a>
-                </div>
-                <div class="product-box--category">
-                    <strong>Gentlemen, earrings</strong>
-                </div>
-                <div class="product-box--details">
-                    <div class="old-price-container">
-                        <div class="old-price">
-                            <span>5$</span>
-                        </div>
-                        <div class="discount">
-                            <div>
-                                <span>5</span>%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new-price">
-                        <span class="new-price">0.25</span>$
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
 
 
         </div>
