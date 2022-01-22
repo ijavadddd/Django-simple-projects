@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.commerce.apps.CommerceConfig'
 ]
 
 MIDDLEWARE = [
@@ -76,11 +77,13 @@ WSGI_APPLICATION = 'jewelry_gallery.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mysql.connector.django',
+        'NAME':'db_jewelrygallery_2',
+        'USER':'root',
+        'PASSWORD':'58858810',
+        'HOST':'localhost',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
