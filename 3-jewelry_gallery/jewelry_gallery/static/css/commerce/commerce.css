@@ -67,7 +67,7 @@
     width: 45px;
     height: 45px;
     position: absolute;
-    inset: 0px 0px auto auto;
+    inset: 5px 5px auto auto;
     align-self: flex-end;
     display: flex;
     justify-content: center;

@@ -29,14 +29,18 @@
                     <img src="{{media}}{{product.Image}}" alt="earrings">
                     {% if product.Description != None %}
                     <div class="product-description">
-                        <p>{{product.Description}}</p>
+                        <p>{{product.Description}}  </p>
                     </div>
                     {% endif %}
                 </div>
                 <div class="product-box--title-container">
-                    <a href="#">
+                    <a href="{{product.Id}}/{{product.Slug}}">
                         <h2>
+                            {% if product.Brand != None %}
+                            {{product.Title}} - {{product.Brand}}
+                            {% else %}
                             {{product.Title}}
+                            {% endif %}
                         </h2>
                     </a>
                 </div>
