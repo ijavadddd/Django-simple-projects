@@ -12,11 +12,6 @@ def search(request):
 
 def Product_Page(request,productId,productSlug):
     product = Product.objects.all().filter(Id=int(productId))
-    # products=Product.objects.all().filter('Id='productId)
-    # for item in products:
-    #     if item['0']==productId:
-    #         product=item
-    #         break
     context={
         'media':settings.MEDIA_URL,
         'product':product,
