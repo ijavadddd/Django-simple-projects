@@ -1,6 +1,9 @@
 {% extends 'base_index.html' %}
 {% load static %}
 {% block title_section %}
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="{% static 'css/commerce/commerce.css' %}">
             <title>Jewelry Galley</title>
 {% endblock %}
@@ -24,6 +27,11 @@
                 </div>
                 <div class="product-box--image-container">
                     <img src="{{media}}{{product.Image}}" alt="earrings">
+                    {% if product.Description != None %}
+                    <div class="product-description">
+                        <p>{{product.Description}}</p>
+                    </div>
+                    {% endif %}
                 </div>
                 <div class="product-box--title-container">
                     <a href="#">
