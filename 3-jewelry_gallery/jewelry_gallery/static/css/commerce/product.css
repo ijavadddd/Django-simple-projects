@@ -12,14 +12,16 @@
     display: flex;
     justify-content:flex-start; 
     gap:20px;
+    flex-wrap: wrap;
 }
 .left-side{
-    width:30%;
+    flex: 0 1 min(100%,50ch);
     display: flex;
-    justify-content:center;
+    justify-content: center;
+    margin: 0 auto;
 }
 .right-side{
-    width:70%;
+    flex: 1 1 max(40%,35ch);
 }
 .product--image-container{
     width:100%;
@@ -49,7 +51,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index:600;
+    /* z-index:600; */
 }
 /* .save-product i{
     color: rgb(240, 79, 58)!important;

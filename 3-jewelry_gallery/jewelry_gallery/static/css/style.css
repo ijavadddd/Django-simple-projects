@@ -294,6 +294,7 @@ a{
     height:max-content;
     padding:.8rem 0.5rem;
     width: 100%;
+    z-index: 800;
 }
 .responsive-search{
     width: 100% !important;;
