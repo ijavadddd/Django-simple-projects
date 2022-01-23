@@ -51,21 +51,22 @@
                         </div>
                         <div class="buy-button">Add to card</div>
                     </div>
-                    {% comment %}
+                    
                     <div class="product-property">
                         <div class="product-property--title">
                             <h2>Product specifications</h2>
                             <div class="border-botttom"></div>
                         </div>
-                        <table>
-                            {% for property in product.Attribute.area.all %}
+                        <table class="product-Specifications">
+                            {% for property in product.Attribute.all %}
                             <tr>
-                                <td>{{property}}</td>
+                                <td>{{property.ProductProperty}}</td>
+                                <td>{{property.Value}}</td>
                             </tr>
                             {% endfor %}
                         </table>
                     </div>
-                    {% endcomment %}
+
                 </div>
             </div>
         </div>

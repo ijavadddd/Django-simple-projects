@@ -40,7 +40,7 @@ class Attribute(models.Model):
         return self.values
 
 class Product(models.Model):
-    Id= models.BigAutoField(primary_key=True ,auto_created=True)
+    Id = models.BigAutoField(primary_key=True ,auto_created=True)
     Image = models.CharField(max_length=450)
     Title = models.CharField(max_length=250)
     Description = models.TextField(null=True, blank=True)
