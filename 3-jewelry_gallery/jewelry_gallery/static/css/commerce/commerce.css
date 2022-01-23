@@ -127,3 +127,23 @@
     width: 100px;
     border-radius:5px 0 0 0;
 }
+.save-product{
+    transition: 0.5s;
+    background-color: #fff;
+    border: 1px solid #f3f3f3c7;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    inset: 0px 0px auto auto;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.save-product i{
+    color: rgba(218, 218, 218, 0.685);
+    font-size: 1.8rem;
+    cursor: pointer;
+
+}
