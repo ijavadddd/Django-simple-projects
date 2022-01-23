@@ -11,12 +11,12 @@ def search(request):
     return render(request,'commerce/commerce.html',context)
 
 def Product_Page(request,productId,productSlug):
-    product = None
-    products=Product.objects.all()
-    for item in products:
-        if productId==item:
-            product=item
-            break
+    product = Product.objects.all().filter(Id=int(productId))
+    # products=Product.objects.all().filter('Id='productId)
+    # for item in products:
+    #     if item['0']==productId:
+    #         product=item
+    #         break
     context={
         'media':settings.MEDIA_URL,
         'product':product,

@@ -1,8 +1,73 @@
 {% extends 'base_index.html' %}
 {% load static %}
 {% block title_section %}
+        <link rel="stylesheet" href="{% static 'css/commerce/product.css' %}">
 {% endblock %}
-    <link rel="stylesheet" href="{% static 'css/commerce/product.css' %}">
 {% block main_content %}
-
+    <div class="main-container">
+        {% for product in product %}
+        <div class="product-container">
+            <div class="left-side">
+                <div class="product-items">
+                    <div class="product-item save-product">
+                        <i class="bi bi-heart"></i>
+                        <!-- <i class="bi bi-heart-fill"></i> -->
+                    </div>
+                    <div class="product-item">
+                        <i class="bi bi-share-fill"></i>
+                    </div>
+                </div>
+                <div class="product--image-container">
+                    <img src="{{media}}{{product.Image}}" alt="{{product.Title}}">
+                    <div class="other-image-container">
+                        <img src="{{media}}{{product.Image}}" alt="{{product.Title}}">
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div>
+                    <h1 class="product--title">
+                        {{product.Title}}
+                    </h1>
+                    {% if product.Brand != None %}
+                    <h2>
+                        {{product.Brand}}
+                    </h2>
+                    {% endif %}
+                </div>
+                <div class="details">
+                    <div>
+                        <div class="old-price-container">
+                            <div class="old-price">
+                                <p>Price : <span>{{product.Price}} $</span></p>
+                            </div>
+                            <div class="discount">
+                                <span>{{product.Discount}}%</span>
+                            </div>
+                        </div>
+                        <div class="new-price">
+                            <p>Price : <span>{{product.NewPrice}} $</span></p>
+                        </div>
+                        <div class="buy-button">Add to card</div>
+                    </div>
+                    {% comment %}
+                    <div class="product-property">
+                        <div class="product-property--title">
+                            <h2>Product specifications</h2>
+                            <div class="border-botttom"></div>
+                        </div>
+                        <table>
+                            {% for property in product.Attribute.area.all %}
+                            <tr>
+                                <td>{{property}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    {% endcomment %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}
