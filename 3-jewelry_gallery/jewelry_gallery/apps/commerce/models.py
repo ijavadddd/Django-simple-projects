@@ -5,6 +5,7 @@ class ProductCategory(models.Model):
     CategoryTitle = models.CharField(max_length=80)
     Slug = models.SlugField(max_length=100)
     CategoryStatus = models.BooleanField(default=True)
+    Parent = models.ForeignKey('self',on_delete=models.CASCADE,null=True, blank=True)
     
     def __str__(self):
         self.values = f'{self.CategoryTitle}'

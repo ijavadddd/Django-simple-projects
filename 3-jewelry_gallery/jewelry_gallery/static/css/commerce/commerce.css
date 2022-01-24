@@ -147,7 +147,9 @@
     justify-content:center;
     align-items:center;
     color:#fff;
+    font-size: 0.8rem;
     font-weight: 800;
+    padding: 1.23rem;
 }
 .new-price{
     margin-top:5px;

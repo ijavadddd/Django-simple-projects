@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'jewelry_gallery.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
-        'NAME':'db_jewelrygallery_2',
+        'NAME':'db_jewelrygallery',
         'USER':'root',
         'PASSWORD':'58858810',
         'HOST':'localhost',

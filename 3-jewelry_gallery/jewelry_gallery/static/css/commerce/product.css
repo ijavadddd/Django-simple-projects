@@ -77,9 +77,18 @@
     max-width:100%;
     max-height:100%
 }
+.product-category{
+    font-size: 1rem;
+    margin-bottom:15px;
+    color:rgb(144 144 144);
+    font-weight:100;
+}
+.product-category a{
+    font-weight: 400;
+    color:rgb(144 144 144);
+}
 .product--title-container{
     margin-bottom:35px;
-
 }
 .product--title{
     font-size:2rem;
@@ -124,8 +133,9 @@
     display:flex;
     justify-content:center;
     align-items: center;
+    font-size: 0.8rem;
     font-weight: 800;
-    font-size:1.12rem;
+    padding: 1.23rem;
 }
 .buy-button{
     transition:background-color 0.6s 0.2s;

@@ -2,6 +2,7 @@
 {% load static %}
 {% block title_section %}
         <link rel="stylesheet" href="{% static 'css/commerce/product.css' %}">
+        <title>{{product.Title}}</title>
 {% endblock %}
 {% block main_content %}
     <div class="main-container">
@@ -26,6 +27,11 @@
                 </div>
             </div>
             <div class="right-side">
+                <div class="product-category">
+                    {% for category in product.Category.all %}
+                        <a href="#">{{category.Parent}}</a><span> > </span><a href="#">{{category}}</a>
+                    {% endfor %}
+                </div>
                 <div class="product--title-container">
                     <h1 class="product--title">
                         {{product.Title}}
