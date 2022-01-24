@@ -20,6 +20,7 @@
         </div>
         <div class="main-container">
             {% for product in products %}
+            {% if product.Status == True %}
             <div class="product-box">
                 <div class="save-product">
                     <!-- <i class="bi bi-heart"></i> -->
@@ -70,6 +71,7 @@
                     <i class="bi bi-cart-plus"></i>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
 
 

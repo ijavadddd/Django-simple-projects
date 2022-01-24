@@ -176,3 +176,8 @@
 .product-property{
     flex:1 1 max(37%,40ch)
 }
+.not-found-message{
+    margin:80px auto;
+    width:50%;
+    font-size:4rem;
+}
