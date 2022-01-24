@@ -205,6 +205,9 @@ a{
     /* background-color:red; */
     position:relative;
     inset: auto auto 0 auto;
+    min-height: 48px;
+    z-index: 100;
+
 }
 .menu-container > .menu-list{
     list-style: none;
@@ -227,11 +230,6 @@ a{
 }
 .menu-container > .menu-list > .menu-item a:hover{
     background-color:#ad1818;
-}
-.bottom-header-container{
-    min-height:40%;
-    z-index: 100;
-
 }
 .responsive-menu-container{
     display: flex;
