@@ -57,9 +57,6 @@
     max-height:inherit;
     cursor: pointer;
 }
-.product-box--image-container:hover .product-description{
-    display: block!important;
-}
 .save-product{
     background-color: #fff;
     border: 1px solid #f3f3f3c7;
@@ -89,10 +86,16 @@
     line-height:2.1rem;
     font-weight:800;
     text-align: justify;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.4s, opacity 0.5s linear;
     z-index: 50;
     max-height: inherit;
     overflow: hidden;
+}
+.product-box--image-container:hover .product-description{
+    visibility: visible !important;
+    opacity: 1;
 }
 .product-description p{
     width: inherit;
