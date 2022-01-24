@@ -80,7 +80,7 @@
 .product-category{
     font-size: 1rem;
     margin-bottom:15px;
-    color:rgb(144 144 144);
+    color:rgb(0, 0, 0);
     font-weight:100;
 }
 .product-category a{
@@ -156,4 +156,23 @@
     border-bottom:2px solid rgb(150, 150, 150);
     font-size: 1rem;
     font-weight:400;
+}
+.more-detail{
+    width:85%;
+    margin:0 auto;
+    display: flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:30px;
+    flex-wrap: wrap;
+}
+.product-description{
+    flex: 1 1 max(55%,36ch);
+}
+.description-paragraph{
+    line-height: 1.8rem;
+    padding-left:15px;
+}
+.product-property{
+    flex:1 1 max(37%,40ch)
 }

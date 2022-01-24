@@ -29,7 +29,7 @@
             <div class="right-side">
                 <div class="product-category">
                     {% for category in product.Category.all %}
-                        <a href="#">{{category.Parent}}</a><span> > </span><a href="#">{{category}}</a>
+                        <a href="#">{{category.CategoryTitle}}</a><span> \ </span>
                     {% endfor %}
                 </div>
                 <div class="product--title-container">
@@ -58,21 +58,30 @@
                         <div class="buy-button">Add to card</div>
                     </div>
                     
-                    <div class="product-property">
-                        <div class="product-property--title">
-                            <h2>Product specifications</h2>
-                            <div class="border-botttom"></div>
-                        </div>
-                        <table class="product-Specifications">
-                            {% for property in product.Attribute.all %}
-                            <tr>
-                                <td>{{property.ProductProperty}}</td>
-                                <td>{{property.Value}}</td>
-                            </tr>
-                            {% endfor %}
-                        </table>
-                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="more-detail">
+                <div class="product-description">
+                    <h3>Product description</h3>
+                    <div class="border-botttom"></div>
 
+                    <p class="description-paragraph">{{product.Description}}</p>
+                </div>
+                <div class="product-property">
+                    <div class="product-property--title">
+                        <h2>Product specifications</h2>
+                        <div class="border-botttom"></div>
+                    </div>
+                    <table class="product-Specifications">
+                        {% for property in product.Attribute.all %}
+                        <tr>
+                            <td>{{property.ProductProperty}}</td>
+                            <td>{{property.Value}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
                 </div>
             </div>
         </div>
