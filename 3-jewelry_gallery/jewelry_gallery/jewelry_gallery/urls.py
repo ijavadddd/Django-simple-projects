@@ -6,4 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('apps.home.urls')),
     path('search/',include('apps.commerce.urls')),
+    path('contact_us/',include('apps.contact_us.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
