@@ -76,6 +76,9 @@
     font-size: 1.8rem;
     cursor: pointer;
 }
+.save-product i:active{
+    color: rgb(255, 0, 0);
+}
 .product-description{
     transition: 5s 4s;
     background-color:rgba(230, 230, 230, 0.719);
