@@ -9,58 +9,62 @@
         {% for product in product %}
         {% if product.Status == True %}
         <div class="product-container">
-            <div class="left-side">
-                <div class="product-items">
-                    <div class="product-item save-product">
-                        <i class="bi bi-heart"></i>
-                        <!-- <i class="bi bi-heart-fill"></i> -->
+            <div class="product-main">
+                <div class="left-side">
+                    <div class="product-items">
+                        <div class="product-item save-product">
+                            <i class="bi bi-heart"></i>
+                            <!-- <i class="bi bi-heart-fill"></i> -->
+                        </div>
+                        <div class="product-item">
+                            <input type="text" value="{{request}}" class="url-field" id="myInput" disabled hidden>
+                            <i class="bi bi-share-fill" onclick="myFunction()"></i>
+                        </div>
                     </div>
-                    <div class="product-item">
-                        <input type="text" value="{{request}}" class="url-field" id="myInput" disabled hidden>
-                        <i class="bi bi-share-fill" onclick="myFunction()"></i>
+                    <div class="product--image-container">
+                        <div class="product-main-image">
+                            <img src="{{media}}{{product.Image}}" alt="{{product.Title}}">
+                        </div>
+                        <div class="other-image-container">
+                            <img src="{{media}}{{product.Image}}" alt="{{product.Title}}">
+                        </div>
                     </div>
                 </div>
-                <div class="product--image-container">
-                    <img src="{{media}}{{product.Image}}" alt="{{product.Title}}">
-                    <div class="other-image-container">
-                        <img src="{{media}}{{product.Image}}" alt="{{product.Title}}">
+                <div class="right-side">
+                    <div class="product-category">
+                        {% for category in product.Category.all %}
+                            <a href="#">{{category.CategoryTitle}}</a><span> \ </span>
+                        {% endfor %}
                     </div>
-                </div>
+                    <div class="product--title-container">
+                        <h1 class="product--title">
+                            {{product.Title}}
+                        </h1>
+                        {% if product.Brand != None %}
+                        <h2 class="product--title__brand">
+                            {{product.Brand}}
+                        </h2>
+                        {% endif %}
+                    </div>
+                    <div class="details">
+                        <div>
+                            <div class="old-price-container">
+                                <div class="old-price">
+                                    <p>Price : <span>{{product.Price}} $</span></p>
+                                </div>
+                                <div class="discount">
+                                    <span>{{product.Discount}}%</span>
+                                </div>
+                            </div>
+                            <div class="new-price">
+                                <p>Price : <span>{{product.NewPrice}} $</span></p>
+                            </div>
+                            <div class="buy-button">Add to card</div>
+                        </div>
+                        
+                        
+                    </div>
             </div>
-            <div class="right-side">
-                <div class="product-category">
-                    {% for category in product.Category.all %}
-                        <a href="#">{{category.CategoryTitle}}</a><span> \ </span>
-                    {% endfor %}
-                </div>
-                <div class="product--title-container">
-                    <h1 class="product--title">
-                        {{product.Title}}
-                    </h1>
-                    {% if product.Brand != None %}
-                    <h2 class="product--title__brand">
-                        {{product.Brand}}
-                    </h2>
-                    {% endif %}
-                </div>
-                <div class="details">
-                    <div>
-                        <div class="old-price-container">
-                            <div class="old-price">
-                                <p>Price : <span>{{product.Price}} $</span></p>
-                            </div>
-                            <div class="discount">
-                                <span>{{product.Discount}}%</span>
-                            </div>
-                        </div>
-                        <div class="new-price">
-                            <p>Price : <span>{{product.NewPrice}} $</span></p>
-                        </div>
-                        <div class="buy-button">Add to card</div>
-                    </div>
-                    
-                    
-                </div>
                 
             </div>
             <div class="more-detail">
