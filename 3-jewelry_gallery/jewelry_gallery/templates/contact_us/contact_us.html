@@ -1,8 +1,26 @@
 {% extends 'base_index.html' %}
 {% load static %}
 {% block title_section %}
-        <link rel="stylesheet" href="{% static 'contact_us/contact_us.css' %}">
+        <link rel="stylesheet" href="{% static 'css/contact_us/contact_us.css' %}">
 {% endblock %}
 {% block main_content %}
-
+    <div class="container">
+        <div class="center-container">
+            <div class="container-title">
+                <h1>Dear user, contact us to answer questions and support through the following ways:</h1>
+            </div>
+            <div class="contact-profile">
+                <div class="contact-profile--photo">
+                    <img src="{{media}}images/programmer/programmer.jpg" alt="programmer">
+                </div>
+                <div class="contact-profile--detail">
+                    <h2>Contact me:</h2>
+                    <div class="social-media-container">
+                        <a href="https://www.linkedin.com/in/ijavadddd/" target="_blank"><i class="bi bi-linkedin social-item"></i></a>
+                        <a href="https://github.com/ijavadddd" target="_blank"><i class="bi bi-github social-item"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

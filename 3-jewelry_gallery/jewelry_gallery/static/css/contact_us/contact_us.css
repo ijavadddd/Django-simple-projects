@@ -1,0 +1,56 @@
+.container{
+    width:100%;
+    min-height:350px;
+}
+.center-container{
+    width:80%;
+    margin:0px auto;
+    padding:40px 0;
+}
+.container-title{
+    padding: 0 0 20px 0;
+    border-bottom: 0.7px solid #c7c7c7;
+}
+.container-title h1{
+    font-size:1.4rem;
+    color:rgb(165, 165, 165);
+    font-weight:600;
+}
+.contact-profile{
+    width:100%;
+    display:flex;
+    padding:25px 0;
+    gap:5%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.contact-profile--photo{
+    flex:0 1 max(30%,24ch);
+}
+.contact-profile--photo img{
+    width:100%;
+    border-radius:50%;
+}
+.contact-profile--detail{
+    flex:0 1 max(65%,30ch);
+}
+.contact-profile--detail h2{
+    font-size:1.5rem;
+    color:rgb(78, 78, 78);
+    font-weight:800;
+    margin :0 0 20px 0;
+}
+.social-media-container{
+    display:flex;
+    gap:50px;
+    flex-wrap:wrap;
+}
+.social-item{
+    font-size:3.5rem;
+}
+.bi-linkedin{
+    color:rgb(10,102,194);
+}
+.bi-github{
+    color:#000;
+}
