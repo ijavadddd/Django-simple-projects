@@ -48,7 +48,7 @@
     cursor:zoom-in;
     max-width:100%;
     max-height: 100%;
-    transition: all 0.2s 0.1s linear;
+    transition: all 0.2s 0.5s linear;
 }
 .product-main-image img:hover{
     transform: scale(1.7);
