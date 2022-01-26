@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ProductCategory,ProductProperty,Product,Attribute
+from .models import ProductCategory,ProductProperty,Product,Attribute,ProductImage
 # Register your models here.
 @admin.register(ProductCategory)
 class ProductCategoryAdmin(admin.ModelAdmin):
@@ -12,14 +12,17 @@ class ProductPropertyAdmin(admin.ModelAdmin):
     list_display = ('PropertyTitle','ProductPropertyStatus')
     search_fields = ('ProductPropertyStatus',)
 
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    list_display = ('Title','Brand','Price','Discount','Status')
-    search_fields = ('Status','Discount','Star')
-    prepopulated_fields = {'Slug':('Title','Brand')}
-
 @admin.register(Attribute)
 class AttributeAdmin(admin.ModelAdmin):
     list_display = ('ProductProperty','Value','AttributeStatus')
     search_fields = ('AttributeStatus',)
 
+@admin.register(ProductImage)
+class ProductImageAdmin(admin.ModelAdmin):
+    list_display = ('Image',)
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('Title','Brand','Price','Discount','Status')
+    search_fields = ('Status','Discount','Star')
+    prepopulated_fields = {'Slug':('Title','Brand')}

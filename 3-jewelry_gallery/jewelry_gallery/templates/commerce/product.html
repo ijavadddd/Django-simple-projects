@@ -23,10 +23,13 @@
                     </div>
                     <div class="product--image-container">
                         <div class="product-main-image">
-                            <img src="{{media}}{{product.Image}}" alt="{{product.Title}}">
+                            <img src="{{media}}{{product.MainImage}}" alt="{{product.Title}}">
                         </div>
                         <div class="other-image-container">
-                            <img src="{{media}}{{product.Image}}" alt="{{product.Title}}">
+                            <img src="{{media}}{{product.MainImage}}" alt="{{product.Title}}">
+                            {% for image in product.Image.all %}
+                            <img src="{{media}}{{image}}" alt="">
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

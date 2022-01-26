@@ -40,9 +40,16 @@ class Attribute(models.Model):
         self.values = f'{self.ProductProperty} {self.Value}'
         return self.values
 
+class ProductImage(models.Model):
+    Image = models.CharField(max_length=220)
+    
+    def __str__(self):
+        self.values = f'{self.Image}'
+        return self.values
+
 class Product(models.Model):
     Id = models.BigAutoField(primary_key=True ,auto_created=True)
-    Image = models.CharField(max_length=450)
+    MainImage = models.CharField(max_length=250)
     Title = models.CharField(max_length=250)
     Description = models.TextField(null=True, blank=True)
     Brand = models.CharField(max_length=120 ,null=True, blank=True)
@@ -50,9 +57,10 @@ class Product(models.Model):
     Price = models.CharField(max_length=35,verbose_name="Price ( $ )")
     Discount = models.IntegerField(default=0,verbose_name="Discount ( % )")
     Star = models.FloatField(null=True, blank=True)
-    Status = models.BooleanField(default=True)
-    Category = models.ManyToManyField(ProductCategory)
+    Image = models.ManyToManyField(ProductImage)
+    Category = models.ForeignKey(ProductCategory,on_delete=models.SET_NULL,null=True)
     Attribute = models.ManyToManyField(Attribute)
+    Status = models.BooleanField(default=True)
     def CalculatePrice(self): 
         newPrice=(int(self.Price)-((int(self.Price) * self.Discount)/100))
         return newPrice
@@ -61,3 +69,5 @@ class Product(models.Model):
     def __str__(self):
         self.values = f'{self.Title} {self.Brand}'
         return self.values
+
+    
