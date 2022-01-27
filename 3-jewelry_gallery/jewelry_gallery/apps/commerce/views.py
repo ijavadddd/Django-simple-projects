@@ -12,8 +12,17 @@ def search(request):
 
 def Product_Page(request,productId,productSlug):
     product = Product.objects.all().filter(Id=int(productId))
+    category=product[0].Category
+    categoryList=[]
+    def GetCategory(category):
+        if category.Parent != None:
+            GetCategory(category.Parent)
+        categoryList.append(category)
+    GetCategory(category)
+    
     context={
         'media':settings.MEDIA_URL,
-        'product':product,
+        'product':product, 
+        'ccategory':categoryList,
     }
     return render(request,'commerce/product.html',context)
