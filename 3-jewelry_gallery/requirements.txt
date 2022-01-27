@@ -1,0 +1,6 @@
+asgiref==3.4.1
+Django==4.0.1
+mysql-connector-python==8.0.28
+protobuf==3.19.3
+sqlparse==0.4.2
+tzdata==2021.5
