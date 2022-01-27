@@ -142,17 +142,17 @@
     color: #d4d4d4;
 }
 .discount{
-    width:30px;
-    height:30px;
+    width:25px;
+    height:25px;
     background-color:red;
-    border-radius:50%;
-    display: flex;
-    justify-content:center;
-    align-items:center;
     color:#fff;
-    font-size: 0.8rem;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 13px;
     font-weight: 800;
-    padding: 1.23rem;
+    padding:2px;
 }
 .new-price{
     margin-top:5px;

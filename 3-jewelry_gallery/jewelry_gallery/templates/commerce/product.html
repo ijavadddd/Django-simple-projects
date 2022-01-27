@@ -37,8 +37,8 @@
                 </div>
                 <div class="right-side">
                     <div class="product-category">
-                        {% for aa in ccategory %}
-                            <a href="#">{{aa}}</a><span> \ </span>
+                        {% for category in categories %}
+                            <a href="#">{{category.CategoryTitle}}</a><span> \ </span>
                         {% endfor %}
                     </div>
                     <div class="product--title-container">

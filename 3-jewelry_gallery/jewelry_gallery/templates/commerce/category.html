@@ -1,0 +1,80 @@
+{% extends 'base_index.html' %}
+{% load static %}
+{% block title_section %}
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'css/commerce/commerce.css' %}">
+            <title>Jewelry Galley</title>
+{% endblock %}
+{% block main_content %}
+    <div class="container">
+        <div class="sidebar-container">
+            <div class="sidebar-category">
+                <div class="sidebar-category--title-container">
+                    <p>Category</p>
+                    <div class="border-botttom"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="main-container">
+            {% for product in aa %}
+            {% if product.Status == True %}
+            <div class="product-box">
+                <div class="save-product">
+                    <!-- <i class="bi bi-heart"></i> -->
+                    <i class="bi bi-heart-fill"></i>
+                </div>
+                <div class="product-box--image-container">
+                    <img src="{{media}}{{product.MainImage}}" alt="earrings">
+                    {% if product.Description != None %}
+                    <div class="product-description">
+                        <p>{{product.Description}}  </p>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="product-box--title-container">
+                    <a href="{{product.Id}}/{{product.Slug}}">
+                        <h2>
+                            {% if product.Brand != None %}
+                            {{product.Title}} - {{product.Brand}}
+                            {% else %}
+                            {{product.Title}}
+                            {% endif %}
+                        </h2>
+                    </a>
+                </div>
+                <div class="product-box--category">
+                    {% comment %}
+                    {% for category in product.Category %}
+                    <strong>{{Category}}</strong>
+                    {% endfor %}
+                    {% endcomment %}
+                </div>
+                <div class="product-box--details">
+                    <div class="old-price-container">
+                        <div class="old-price">
+                            <span>{{product.Price}}</span>$
+                        </div>
+                        <div class="discount">
+                            <div>
+                                <span>{{product.Discount}}</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-price">
+                        <span class="new-price">{{product.NewPrice}}</span>$
+                    </div>
+                </div>
+                <div class="add_to_list">
+                    <i class="bi bi-cart-plus"></i>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+
+        </div>
+    </div>
+{% endblock %}

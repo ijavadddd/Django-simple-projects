@@ -23,6 +23,27 @@ def Product_Page(request,productId,productSlug):
     context={
         'media':settings.MEDIA_URL,
         'product':product, 
-        'ccategory':categoryList,
+        'categories':categoryList,
     }
     return render(request,'commerce/product.html',context)
+
+def Category(request,category):
+    products = Product.objects.all()
+    aa=[]
+    for product in products:
+        if product.Category.Slug == category:
+            aa.append(product)
+        else:
+            def GetCategory(productCategory):
+                if productCategory.Slug == category:
+                    aa.append(product)
+                if productCategory.Parent != None:
+                    GetCategory(productCategory.Parent)
+            GetCategory(product.Category)
+    context={
+        'media':settings.MEDIA_URL,
+        'product':products,
+        'aa':aa,
+    }
+    print(aa)
+    return render(request,'commerce/category.html',context)
