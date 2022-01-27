@@ -2,7 +2,9 @@
 {% load static %}
 {% block title_section %}
         <link rel="stylesheet" href="{% static 'css/commerce/product.css' %}">
-        <title>{{product.Title}}</title>
+        {% for product in product %}
+        <title>Specifications, price and purchase {{product.Title}}</title>
+        {% endfor %}
 {% endblock %}
 {% block main_content %}
     <div class="main-container">
