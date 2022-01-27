@@ -17,7 +17,7 @@ def Product_Page(request,productId,productSlug):
     def GetCategory(category):
         if category.Parent != None:
             GetCategory(category.Parent)
-        categoryList.append(category)
+        categoryList.append((category,category.Slug))
     GetCategory(category)
     
     context={
@@ -29,21 +29,20 @@ def Product_Page(request,productId,productSlug):
 
 def Category(request,category):
     products = Product.objects.all()
-    aa=[]
+    categoryProducts=[]
     for product in products:
         if product.Category.Slug == category:
-            aa.append(product)
+            categoryProducts.append(product)
         else:
             def GetCategory(productCategory):
                 if productCategory.Slug == category:
-                    aa.append(product)
+                    categoryProducts.append(product)
                 if productCategory.Parent != None:
                     GetCategory(productCategory.Parent)
             GetCategory(product.Category)
     context={
         'media':settings.MEDIA_URL,
         'product':products,
-        'aa':aa,
+        'categoryProducts':categoryProducts,
     }
-    print(aa)
     return render(request,'commerce/category.html',context)

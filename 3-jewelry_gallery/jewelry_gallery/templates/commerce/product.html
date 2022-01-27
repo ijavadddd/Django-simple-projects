@@ -38,7 +38,7 @@
                 <div class="right-side">
                     <div class="product-category">
                         {% for category in categories %}
-                            <a href="#">{{category.CategoryTitle}}</a><span> \ </span>
+                            <a href="{% url 'search' %}{{category.1}}">{{category.0.CategoryTitle}}</a><span> \ </span>
                         {% endfor %}
                     </div>
                     <div class="product--title-container">
