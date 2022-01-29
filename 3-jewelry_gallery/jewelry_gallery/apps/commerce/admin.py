@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ProductCategory,ProductProperty,Product,Attribute,ProductImage
+from .models import ProductCategory,ProductProperty,Product,Attribute,ProductImage,SameProduct
 # Register your models here.
 @admin.register(ProductCategory)
 class ProductCategoryAdmin(admin.ModelAdmin):
@@ -23,6 +23,11 @@ class ProductImageAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('Title','Brand','Price','Discount','Status')
+    list_display = ('Title','Brand','ProductId','Price','Discount','Status')
     search_fields = ('Status','Discount','Star')
     prepopulated_fields = {'Slug':('Title','Brand')}
+
+@admin.register(SameProduct)
+class SameProductAdmin(admin.ModelAdmin):
+    list_display = ('ProductId','Status')
+    search_fields = ('Status','Discount')

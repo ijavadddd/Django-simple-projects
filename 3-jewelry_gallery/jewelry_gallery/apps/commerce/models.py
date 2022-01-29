@@ -47,24 +47,46 @@ class ProductImage(models.Model):
         self.values = f'{self.Image}'
         return self.values
 
-class Product(models.Model):
+class SameProduct(models.Model):
     Id = models.BigAutoField(primary_key=True ,auto_created=True)
-    MainImage = models.CharField(max_length=250)
-    Title = models.CharField(max_length=250)
-    Brand = models.CharField(max_length=120 ,null=True, blank=True)
-    Slug = models.SlugField(max_length=450)
-    Description = models.TextField(null=True, blank=True)
-    Price = models.CharField(max_length=35,verbose_name="Price ( $ )")
-    Discount = models.IntegerField(default=0,verbose_name="Discount ( % )")
-    Star = models.FloatField(null=True, blank=True)
+    ProductId=models.CharField(max_length=10)
+    MainImage = models.CharField(max_length=250,null=True, blank=True)
+    Price = models.CharField(max_length=35,verbose_name="Price ( $ )",null=True, blank=True)
+    Discount = models.IntegerField(default=0,verbose_name="Discount ( % )",null=True, blank=True)
     Image = models.ManyToManyField(ProductImage,null=True,blank=True)
-    Category = models.ForeignKey(ProductCategory,on_delete=models.SET_NULL,null=True)
     Attribute = models.ManyToManyField(Attribute)
     Status = models.BooleanField(default=True)
     def CalculatePrice(self): 
         newPrice=(int(self.Price)-((int(self.Price) * self.Discount)/100))
         return newPrice
     NewPrice =CalculatePrice
+    
+    # def __str__(self):
+    #     self.values = f'{self.Title} {self.Brand}'
+    #     return self.values
+
+    
+class Product(models.Model):
+    def CalculatePrice(self): 
+        newPrice=(int(self.Price)-((int(self.Price) * self.Discount)/100))
+        return newPrice
+    def Product_Id(self): return str(self.Id)
+    Id = models.BigAutoField(primary_key=True ,auto_created=True)
+    ProductId = Product_Id
+    Category = models.ForeignKey(ProductCategory,on_delete=models.SET_NULL,null=True)
+    MainImage = models.CharField(max_length=250)
+    Title = models.CharField(max_length=250)
+    Brand = models.CharField(max_length=120 ,null=True, blank=True)
+    Slug = models.SlugField(max_length=450)
+    Description = models.TextField(null=True, blank=True)
+    Price = models.CharField(max_length=35,verbose_name="Price ( $ )")
+    NewPrice =CalculatePrice
+    Discount = models.IntegerField(default=0,verbose_name="Discount ( % )")
+    Star = models.FloatField(null=True, blank=True)
+    Image = models.ManyToManyField(ProductImage,null=True,blank=True)
+    Attribute = models.ManyToManyField(Attribute)
+    Same = models.ManyToManyField(SameProduct,null=True,blank=True)
+    Status = models.BooleanField(default=True)
     
     def __str__(self):
         self.values = f'{self.Title} {self.Brand}'
