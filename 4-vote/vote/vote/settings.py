@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps',
+    'apps.account.apps.AccountConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,12 +76,15 @@ WSGI_APPLICATION = 'vote.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'mysql.connector.django',
+        'NAME':'vote',
+        'USER':'root',
+        'PASSWORD':'58858810',
+        'HOST':'localhost',
+    }
+}
 
 
 # Password validation
