@@ -1,0 +1,130 @@
+{% extends 'base_index.html' %}
+{% load static %}
+{% block title_section %}
+        <link rel="stylesheet" href="{% static 'css/commerce/product.css' %}">
+        {% for product in product %}
+        <title>Specifications, price and purchase {{product.Title}}</title>
+        {% endfor %}
+{% endblock %}
+{% block main_content %}
+    <div class="main-container">
+        {% for product in product %}
+        {% if product.Status == True %}
+        <div class="product-container">
+            <div class="product-main">
+                <div class="left-side">
+                    <div class="product-items">
+                        <div class="product-item save-product">
+                            <i class="bi bi-heart"></i>
+                            <!-- <i class="bi bi-heart-fill"></i> -->
+                        </div>
+                        <div class="product-item">
+                            <input type="text" value="{{request}}" class="url-field" id="myInput" disabled hidden>
+                            <i class="bi bi-share-fill" onclick="myFunction()"></i>
+                        </div>
+                    </div>
+                    <div class="product--image-container">
+                        <div class="product-main-image">
+                            <img src="{{media}}{{product.MainImage}}" alt="{{product.Title}}">
+                        </div>
+                        <div class="other-image-container">
+                            <img src="{{media}}{{product.MainImage}}" alt="{{product.Title}}">
+                            {% for image in product.Image.all %}
+                            <img src="{{media}}{{image}}" alt="">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="product-category">
+                        {% for category in categories %}
+                            <a href="{% url 'search' %}{{category.1}}">{{category.0.CategoryTitle}}</a><span> \ </span>
+                        {% endfor %}
+                    </div>
+                    <div class="product--title-container">
+                        <h1 class="product--title">
+                            {{product.Title}}
+                        </h1>
+                        {% if product.Brand != None %}
+                        <h2 class="product--title__brand">
+                            {{product.Brand}}
+                        </h2>
+                        {% endif %}
+                    </div>
+                    <div class="details">
+                        <div>
+                            <div class="old-price-container">
+                                <div class="old-price">
+                                    <p>Price : <span>{{product.Price}} $</span></p>
+                                </div>
+                                <div class="discount">
+                                    <span>{{product.Discount}}%</span>
+                                </div>
+                            </div>
+                            <div class="new-price">
+                                <p>Price : <span>{{product.NewPrice}} $</span></p>
+                            </div>
+                            
+                            <div class="product-type">
+                                <select name="cars" id="cars">
+                                    {% for type in product.OtherProduct.all %}
+                                    <option value="{{type.MainAttribute}}">{{type.MainAttribute}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            
+                            <div class="buy-button">Add to card</div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <div class="more-detail">
+                <div class="product-description">
+                    <h3>Product description</h3>
+                    <div class="border-botttom"></div>
+                    <p class="description-paragraph">{{product.Description}}</p>
+                </div>
+                <div class="product-property">
+                    <div class="product-property--title">
+                        <h2>Product specifications</h2>
+                        <div class="border-botttom"></div>
+                    </div>
+                    <table class="product-Specifications">
+                        {% for property in product.Attribute.all %}
+                        <tr>
+                            <td>{{property.ProductProperty}}</td>
+                            <td>{{property.Value}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="product-container">
+            <div class="not-found-message">
+                <h2>Not Found</h2>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block js_blocks %}
+    <script>
+        function myFunction() {
+            /* Get the text field */
+            var copyText = document.getElementById("myInput");
+        
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+        
+             /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.value);
+        
+            /* Alert the copied text */
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
+{% endblock %}
