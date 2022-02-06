@@ -17,3 +17,11 @@ def AdminEducation(request):
         'sidebarItems':sidebarItems,
     }
     return render(request,'panel/admin-education.html',context)
+
+def AdminMedia(request):
+    sidebarItems=AdminPanelItem.objects.all()
+    context ={
+        'media':settings.MEDIA_URL,
+        'sidebarItems':sidebarItems,
+    }
+    return render(request,'panel/admin-media.html',context)

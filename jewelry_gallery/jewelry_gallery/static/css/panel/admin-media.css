@@ -1,0 +1,24 @@
+.upload-box {
+    border: 3px dashed rgb(212 212 212);
+    min-height: 250px;
+}
+
+.upload-box--text {
+    width: fit-content;
+    height: fit-content;
+    inset: 0 0 0 0;
+    margin: auto auto;
+    text-align: center;
+}
+
+.search-input {
+    height: 40px;
+}
+
+.file-box {
+    min-height: 150px;
+}
+
+.file-box-header {
+    border-bottom: 1px solid rgb(199, 199, 199);
+}

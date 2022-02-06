@@ -1,0 +1,62 @@
+{% extends 'panel/admin-main.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/panel/admin-media.css' %}">
+<title>Media</title>
+{% endblock %}
+{% block main %}
+    <div class="col-12">
+        <h2 class="fs-3 text-dark">Manage & Upload media</h2>
+        <div class="border-bottom"></div>
+    </div>
+    <div class="upload-box rounded mt-3 col-12 position-relative">
+        <div class="upload-box--text  position-absolute">
+            <p class="fs-3 text-muted fw-bold m-0">Drop your media here</p>
+            <span class="text-primary d-block">or</span>
+            <button class="btn btn-outline-primary my-2 px-3 py-2 d-inline-block">Select Files</button>
+            <p class="text-muted">Maximum upload file size: 2 MB.</p>
+        </div>
+    </div>
+    <div class="col-12 py-5">
+        <div class="col-12 row gx-0 border border-muted rounded px-4 py-2">
+            <div class="col-12 col-md-6 d-flex align-items-center gap-4">
+                    <a href="#" class="text-muted fs-3">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                    </a>
+                    <a href="#" class="text-muted fs-3">
+                        <i class="bi bi-grid-fill"></i>
+                    </a>
+                    <Select>
+                        <option value="0">All media</option>
+                        <option value="1">Unattached</option>
+                        <option value="2">Mine</option>
+                    </Select>
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-md-end">
+                <input type="text" class="search-input text-muted w-75 bg-light border-0 rounded px-3" placeholder="Search">
+            </div>  
+        </div>
+        <div class="file-box col-12 border border-muted mt-4 rounded">
+            <div class="file-box-header col-12 row gx-0 px-4 py-2 bg-light">
+                <div class="col-5">
+                    <input type="checkbox" id="delete-checkbox">
+                    <label for="delete-checkbox">File</label>
+                </div>
+                <div class="col-7 row gx-0 d-none d-md-flex">
+                    <div class="col-4">
+                        <span class="text-primary">Autor</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="text-primary">Uploaded to</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="text-primary">Date</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 p-2">
+                <p class="text-muted">No media files found.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
