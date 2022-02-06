@@ -1,5 +1,5 @@
 .article-container {
-    height: 400px;
+    max-height: 450px;
 }
 
 .search-input {
@@ -8,7 +8,6 @@
 
 .article-image-container {
     max-width: 100%;
-    height: 250px;
     max-height: 270px;
 }
 
