@@ -1,0 +1,77 @@
+{% extends 'panel/admin-main.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/panel/admin-users.css' %}">
+<title>Media</title>
+{% endblock %}
+{% block main %}
+    <div class="col-12">
+        <div class="col-12">
+            <h2 class="fs-3 d-inline-block">Users</h2>&nbsp;&nbsp;<i class="bi bi-plus-circle-fill fs-3 text-primary" style="cursor: pointer"></i>
+            <div class="border-bottom"></div>
+        </div>
+        <div class="col-12 mt-3">
+            <div class="col-12 my-2">
+                <span class="text-primary">All (1)</span>
+                <span>|</span>
+                <span class="text-primary">Administrator (1)</span>
+                <span>|</span>
+                <span class="text-primary">Subscriber (0)</span>
+            </div>
+            <div class="col-12 row gx-0 my-3">
+                <div class="col-12 col-md-4 ">
+                    <select name="" id="">
+                        <option value="0" selected>Delete</option>
+                    </select>
+                    <button class="btn btn-outline-primary px-4 py-1">Apply</button>
+                </div>
+                <div class="col-12 col-md-8 d-flex align-items-center justify-content-md-end gap-1 mt-2 mt-md-0">
+                    <input type="text" class="search-input text-muted w-75 bg-light border-0 rounded px-3" placeholder="Search">
+                    <button class="search-btn btn btn-primary rounded-circle ">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+            <table class="table">
+                <thead class="bg-light border-0">
+                    <tr scope="row">
+                        <th scope="col" class="col-2 border-0 ">
+                            <input type="checkbox">
+                        </th>
+                        <th scope="col" class="col-3 border-0 ">
+                            <span class="fw-light">UserName</span>
+                        </th>
+                        <th scope="col" class="col-3 border-0 ">
+                            <span class="fw-light">Name</span>
+                        </th>
+                        <th scope="col" class="col-2 w-100 border-0  d-none  d-sm-block">
+                            <span class="fw-light">Email</span>
+                        </th>
+                        <th scope="col" class="col-2 border-0 ">
+                            <span class="fw-light">Role</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr scope="row">
+                        <td scope="col">
+                            <input type="checkbox">
+                        </td>
+                        <td scope="col">
+                            <span>ijavdddd</span>
+                        </td>
+                        <td scope="col">
+                            <span>javad</span>
+                        </td>
+                        <td scope="col" class="d-none  d-sm-block">
+                            <span>info@gmail.com</span>
+                        </td>
+                        <td scope="col">
+                            <span>Admin</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -22,7 +22,7 @@
                 <div class="row gx-2">
                     <div class="offset-2 col-5 offset-sm-0 col-sm-6  offset-lg-4 col-lg-4 d-flex align-items-center justify-content-end gap-2">
                         <span>New Post</span>
-                        <i class="bi bi-chat-left-text text-warning position-relative" style="font-size:2rem;">
+                        <i class="bi bi-envelope text-warning position-relative" style="font-size:2rem;">
                             <div class="new-post-counter text-white bg-danger d-flex align-items-center justify-content-center position-absolute"><span>0</span></div>
                         </i>
                     </div>
@@ -38,6 +38,7 @@
                 <div class="sidebar bg-white rounded p-1">
                     <ul class="sidebar-items list-unstyled">
                         {% for item in sidebarItems %}
+                        {% if item.Status == True %}
                         <li class="sidebar-item position-relative m-2">
                             <a href="{{item.Slug}}" class="stretched-link text-decoration-none text-dark d-flex align-items-center gap-1">
                                 {% if item.Icon != None %}
@@ -45,6 +46,7 @@
                                 {% endif %}
                                 &nbsp;{{item.Title}}</a>
                         </li>
+                        {% endif %}
                         {% endfor %}
                     </ul>
                 </div>

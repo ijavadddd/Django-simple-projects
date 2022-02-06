@@ -25,3 +25,11 @@ def AdminMedia(request):
         'sidebarItems':sidebarItems,
     }
     return render(request,'panel/admin-media.html',context)
+
+def AdminUsers(request):
+    sidebarItems=AdminPanelItem.objects.all()
+    context ={
+        'media':settings.MEDIA_URL,
+        'sidebarItems':sidebarItems,
+    }
+    return render(request,'panel/admin-users.html',context)
