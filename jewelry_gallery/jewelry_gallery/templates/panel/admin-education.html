@@ -1,0 +1,37 @@
+{% extends 'panel/admin-main.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/panel/admin-education.css' %}">
+<title>Learn ...</title>
+{% endblock %}
+{% block main %}
+    <div class="col-12 row">
+        <div class="col-5">
+            <h2 class="text-dark fs-3">Tutorials</h2>
+            <div class="border-bottom"></div>
+        </div>
+        <div class="col-7 d-flex align-items-center justify-content-start">
+            <input type="text" class="w-75 border-0 bg-light rounded-3 px-4 py-2 search-input" placeholder="Search course...">
+            <button class="btn btn-primary"><i class="bi bi-search"></i></button>
+        </div>
+    </div>
+    <div class="col-12 p-4">
+        <article class="article-container col-12 col-sm-6 col-md-4 col-lg-3 ronded-sm shadow-sm bg-light">
+            <div class="article-image-container d-flex">
+                <img src="{{media}}images/education/ed1.jpg" alt="" class="mx-auto">
+            </div>
+            <div class="d-block p-1">
+                <a href="#" class="text-dark text-decoration-none">
+                    <h2 class="fs-3">Learn Seo</h2>
+                </a>
+            </div>
+            <hr class="ed-divider mt-2">
+            <div class="d-flex justify-content-center align-items-center fs-3 py-2">
+                <span class="text-success fw-bold">Free</span>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary d-block mx-auto w-75 fw-light">Course detail</button>
+            </div>
+        </article>
+    </div>
+{% endblock %}

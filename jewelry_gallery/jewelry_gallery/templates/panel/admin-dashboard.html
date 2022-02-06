@@ -1,0 +1,38 @@
+{% extends 'panel/admin-main.html' %}
+{% load static %}
+{% block main %}
+                <div class="col-12">
+                    <h2 class="text-dark fs-3">Dashboard</h2>
+                    <div class="border-bottom"></div>
+                </div>
+                <div class="col-12">
+                    <div class="container border boder-dark mt-3 mx-auto py-3 px-4 row">
+                        <div class="col-12">
+                            <h2 class="fs-5">Welcome to your panel</h2>
+                            <p class="text-muted">We’ve assembled some links to get you started:</p>
+                        </div>
+                        <div class="col-12 row  mt-4">
+                            <div class="col-4">
+                                <h3 class="fs-5">Get Started</h3>
+                                <button class="btn btn-primary my-3 px-4 py-2">Customize Your Site</button>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fs-5">Next Steps</h3>
+                                <a href="#" class="btn btn-link text-primary text-decoration-none">
+                                    <i class="bi bi-pencil-square text-muted"></i>&nbsp;Write your first blog post
+                                </a>
+                                <a href="#" class="btn btn-link text-primary text-decoration-none">
+                                    <i class="bi bi-plus-square text-muted"></i>&nbsp;Add an About page
+                                </a>
+                                <a href="#" class="btn btn-link text-primary text-decoration-none">
+                                    <i class="bi bi-house-door text-muted"></i>&nbsp;Set up your homepage
+                                </a>
+                                <a href="#" class="btn btn-link text-primary text-decoration-none">
+                                    <i class="bi bi-eye text-muted"></i>&nbsp;View your site
+                                </a>
+                            </div>
+                            <div class="col-4"></div>
+                        </div>
+                    </div>
+                </div>
+{% endblock %}

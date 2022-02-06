@@ -1,0 +1,40 @@
+.top-menu {
+    min-height: 75px;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    min-height: 300px;
+}
+
+.main-container {
+    min-height: 300px;
+}
+
+.profile-image {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(61, 61, 61);
+}
+
+.new-post-counter {
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50%;
+    bottom: 5px;
+    right: -10px;
+}
+
+.sidebar-item--icon {
+    font-size: 1.5rem;
+}
+
+.border-bottom {
+    width: 6ch;
+    height: 1ch;
+    border-radius: 50px;
+    background-color: rgb(221, 221, 221);
+}
