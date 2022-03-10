@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
 from .models import AdminPanelItem
+
 # Create your views here.
 def AdminDashboard(request):
     sidebarItems=AdminPanelItem.objects.all()

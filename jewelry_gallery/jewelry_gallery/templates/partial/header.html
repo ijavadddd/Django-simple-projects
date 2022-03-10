@@ -137,6 +137,9 @@
                 <div class="login-continer">
                     <h3 class="form-title">Login</h3>
                     <form action="#" class="login-form">
+                            {% csrf_token %}
+                            {{ registerForm }}
+
                         <input class="form-input" type="text" name="phone-number" placeholder="Enter phone number or email address">
                         <input class="form-input" type="password" name="password" placeholder="Password">
                         <div class="checkbox-container">
