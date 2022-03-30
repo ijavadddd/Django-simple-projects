@@ -325,7 +325,7 @@ a{
     align-items: center;
 }
 .login-register-ceneter-container{
-    /* margin:auto auto; */
+    margin:85px auto 85px;
     background-color: #ffffff;
     opacity: 1;
     width: 90%;
@@ -339,6 +339,11 @@ a{
     position: relative;
     height:fit-content;
     overflow:auto;
+}
+.login-register--scroll-container{
+    position:fixed;
+    inset: 0 0;
+    overflow: hidden auto;
 }
 .show-form{
     display: flex !important;;
