@@ -54,3 +54,19 @@
 .bi-github{
     color:#000;
 }
+.contact-us-form--fields{
+    width:100%;
+    min-height:30px;
+    font-size:1.2rem;
+    outline-style:none;
+    border:none;
+    box-shadow: 0 3px 6px #d6d3d3;
+    margin:5px 0;
+    padding:3px 10px;
+}
+.contact-us-form--btn{
+    border:none;
+    background-color:rgb(68, 68, 216);
+    padding:10px 20px;
+    color:#fff;
+}

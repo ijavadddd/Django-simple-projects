@@ -54,7 +54,11 @@
                                     </a>
                                 </li>
                                 <li class="profile-container--item profile-icon">
+                                    {% if FirstName %}
+                                    {{FirstName}}
+                                    {% else %}
                                     <i class="bi bi-person-fill" onclick="open_login_form()"></i>
+                                    {% endif %}
                                 </li>
                             </ul>
                         </div>
@@ -81,10 +85,10 @@
                                 <a href="{% url 'search' %}">Store</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#">Man</a>
+                                <a href="/search/mans">Man</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#">Woman</a>
+                                <a href="/search/woman">Woman</a>
                             </li>
                             <li class="menu-item">
                                 <a href="{% url 'contact_us' %}">Contact us</a>
@@ -131,48 +135,45 @@
         <!-- LOGIN REGISTER FORM -->
         <div class="login-register-container" id="login-register-container">
             <div class="login-register--scroll-container">
-
-            <div class="login-register-ceneter-container">
-                <div class="close-container" onclick="close_login_form()">
-                    <i class="bi bi-x"></i>
-                </div>
-                <div class="login-continer">
-                    <h3 class="form-title">Login</h3>
-                    <form action="#" class="login-form">
+                <div class="login-register-ceneter-container">
+                    <div class="close-container" onclick="close_login_form()">
+                        <i class="bi bi-x"></i>
+                    </div>
+                    <div class="login-continer">
+                        <h3 class="form-title">Login</h3>
+                        <form method="post" class="login-form">
                             {% csrf_token %}
-                            {{ registerForm }}
-
-                        <input class="form-input" type="text" name="phone-number" placeholder="Enter phone number or email address">
-                        <input class="form-input" type="password" name="password" placeholder="Password">
-                        <div class="checkbox-container">
-                            <label class=chekbox-label>
-                            <input type="checkbox" name="remember-me" id="remember-me" value="forever">
-                                <span>Remember me</span>
-                            </label><br/>
-                            <input type="button" value="Login" class="form-button login-button">
-                        </div>
-                    </form>
-                </div>
-                <div class="register-continer">
-                    <h3 class="form-title">Register</h3>
-                    <form action="#" class="register-form">
-                        <input class="form-input" type="text" name="first-name" placeholder="First Name">
-                        <input class="form-input" type="text" name="last-name" placeholder="Last Name">
-                        <input class="form-input" type="text" name="phone-number" placeholder="Enter phone number or email address">
-                        <input class="form-input" type="password" name="password" placeholder="Password">
-                        <div class="checkbox-container">
-                            <label class=chekbox-label>
-                                <input type="checkbox" name="accept" id="remember-me" value="accept">
-                                <span>Accept term of service</span>
-                            </label><br/><br/>
-                            <label class=chekbox-label>
-                                <input type="checkbox" name="news" id="news" value="emailme">
-                                <span>Email me...</span>
-                            </label><br/>
-                            <input type="button" value="Register" class="form-button login-button">
-                        </div>
-                    </form>
+                            {{login_form.PhoneNumber}}
+                            {{login_form.Password}}
+                            <div class="checkbox-container">
+                                <label class=chekbox-label>
+                                <input type="checkbox" name="remember-me" id="remember-me" value="forever">
+                                    <span>Remember me</span>
+                                </label><br/>
+                                <input type="submit" value="Login" class="form-button login-button">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="register-continer">
+                        <h3 class="form-title">Register</h3>
+                        <form method="POST" class="register-form">
+                            {% csrf_token %}
+                            {{register_form.FirstName}}
+                            {{register_form.PhoneNumber}}
+                            {{register_form.Password}}
+                            <div class="checkbox-container">
+                                <label class=chekbox-label>
+                                    <input type="checkbox" name="accept" id="remember-me" value="accept">
+                                    <span>Accept term of service</span>
+                                </label><br/><br/>
+                                <label class=chekbox-label>
+                                    <input type="checkbox" name="news" id="news" value="emailme">
+                                    <span>Email me...</span>
+                                </label><br/>
+                                <input type="submit" value="Register" class="form-button login-button">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>

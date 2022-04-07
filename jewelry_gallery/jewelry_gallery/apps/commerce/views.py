@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.conf import settings
 from . models import Product
+from .forms import Earrings_Filter_form
 # Create your views here.
 def search(request):
     products=Product.objects.all()
     context={
         'media':settings.MEDIA_URL,
         'products':products,
+        'Earrings_Filter_form':Earrings_Filter_form,
     }
     return render(request,'commerce/commerce.html',context)
 

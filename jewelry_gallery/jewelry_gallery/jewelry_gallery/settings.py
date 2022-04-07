@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.home.apps.HomeConfig',
     'apps.commerce.apps.CommerceConfig',
     'apps.panel.apps.PanelConfig',
+    'apps.contact_us.apps.ContactUsConfig',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,7 @@ DATABASES = {
         'ENGINE': 'mysql.connector.django',
         'NAME':'db_jewelrygallery',
         'USER':'root',
-        'PASSWORD':'58858810',
+        'PASSWORD':'12345678',
         'HOST':'localhost',
     }
 }
